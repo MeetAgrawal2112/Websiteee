@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Non-Teaching Staff | IIITP Pune</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link href="//fonts.googleapis.com" rel="dns-prefetch">
+    <link href="css/css.css" id="google-fonts-css" media="all" rel="stylesheet" />
+        <link href="css/foundation.min.css" id="foundation-css" media="all" rel="stylesheet" />
+    <link href="css/theme-styles.css" id="wc-styles-css" media="all" rel="stylesheet" />
+
+    
+    
+
+    <!--Customizer CSS-->
+	<style type="text/css">
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		h2 a,
+		h3 a,
+		h4 a,
+		h5 a,
+		h6 a,
+		h1 span,
+		h2 span,
+		h3 span,
+		h4 span,
+		h5 span,
+		.tabs li a,
+		.accordion-title,
+		.pricing-table .title {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.top-bar {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.topBar,
+		.topBar p,
+		.topBar ul li {
+			color: #ffffff;
+		}
+
+		.header .submenu li a,
+		.main-container .top-bar .submenu li a {
+			color: #ffffff !important;
+		}
+
+		.navigation-style-two .is-active .submenu li a:hover,
+		.header .is-active .submenu li a:hover,
+		.top-bar .submenu li a:hover {
+			color: #e85d04 !important;
+		}
+
+		.navigation-style-two,
+		.navigation-style-two .top-bar ul {
+			background-color: #174873;
+		}
+
+		.title-section::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/title-section-background-effect-1-1.jpg);
+		}
+
+		.footer::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/slide1.jpg);
+		}
+
+		.seminar-events::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2016/11/eventsbgbk.jpg);
+		}
+	</style>
+	<!--/Customizer CSS-->
+    <style>
+
+        .main-nav li { position: relative; }
+        .main-nav .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; }
+        .main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+        .main-nav .has-dropdown:hover .dropdown-menu { display: block; }
+        .main-nav .dropdown-menu li a { display: block; padding: 0.75rem 1rem; color: #111111; text-decoration: none; font-size: 0.95rem; border-bottom: none; }
+        .main-nav .dropdown-menu li a:hover { background: #f8f9fa; color: #e85d04; }
+
+
+        
+        
+        
+        .page-content { padding:0 22px 34px; max-width: 1400px; margin: 0 auto; }
+
+
+
+
+        /* Premium Filter Styling */
+        .filter-section {
+            padding: 30px 20px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .alphabet-filter-container, #alphabet-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 auto 25px auto;
+            padding: 0;
+            list-style: none;
+            max-width: 1100px;
+        }
+        #alphabet-filter li {
+            margin: 0;
+        }
+        .alphabet-filter-container a, #alphabet-filter a {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 20px;
+            background-color: #f4f6fb;
+            border: 1px solid #eaeaea;
+            color: #174873;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .alphabet-filter-container a:hover, .alphabet-filter-container a.active, #alphabet-filter a:hover, #alphabet-filter a.active {
+            background-color: #e85d04;
+            color: #ffffff;
+            border-color: #e85d04;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.2);
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .filters select {
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            color: #333;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            min-width: 180px;
+            font-family: inherit;
+        }
+        .filters select:hover, .filters select:focus {
+            border-color: #e85d04;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.1);
+        }
+        .staff-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .staff {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            width: 250px;
+            padding: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .staff:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(232, 93, 4, 0.15);
+            border-color: #e85d04;
+        }
+        .staff img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+            border-bottom: 3px solid #174873;
+        }
+        .staff:hover img {
+            transform: scale(1.03);
+            border-bottom: 3px solid #e85d04;
+        }
+        .staff h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 15px 0 5px 0;
+            cursor: pointer;
+            color: #174873;
+        }
+        .staff h2 a, .staff h2 strong {
+            font-weight: 600;
+        }
+        .staff h2:hover {
+            color: #e85d04;
+        }
+        .staff p {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .staff p strong {
+            color: #333;
+        }
+        .staff-details {
+            display: none;
+            padding-top: 10px;
+            font-size: 0.85rem;
+            color: #444;
+            text-align: justify;
+        }
+        .staff.active .staff-details {
+            display: block;
+        }
+        .staff.active {
+            transform: scale(1.05);
+            z-index: 2;
+            border: 2px solid #e85d04;
+            box-shadow: 0 10px 25px rgba(232, 93, 4, 0.2);
+        }
+        .staff.dimmed {
+            opacity: 0.5;
+        }
+        .contact-container a {
+            color: #174873;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .contact-container a:hover {
+            color: #e85d04;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+      <header class="custom-iiitp-header">
+			<!-- Top Blue Bar -->
+			<div class="top-blue-bar">
+				<ul class="social-icons" style="align-items: center;">
+					<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+					<li style="margin-left: 10px;">
+						<select id="language-selector" onchange="changeLanguage(this.value)" style="background: transparent; color: white; border: 1px solid white; padding: 2px 5px; border-radius: 4px; font-size: 12px; cursor: pointer; height: 24px;">
+							<option value="en" style="color: black;">English</option>
+							<option value="hi" style="color: black;">Hindi</option>
+						</select>
+					</li>
+				</ul>
+				<div id="google_translate_element" style="display:none;"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+					}
+					function changeLanguage(lang) {
+						if(lang === 'hi') {
+							document.cookie = "googtrans=/en/hi; path=/";
+							document.cookie = "googtrans=/en/hi; domain=." + document.domain + "; path=/";
+						} else {
+							document.cookie = "googtrans=/en/en; path=/";
+							document.cookie = "googtrans=/en/en; domain=." + document.domain + "; path=/";
+						}
+						window.location.reload();
+					}
+					// Set dropdown to current language
+					document.addEventListener("DOMContentLoaded", function() {
+						if(document.cookie.indexOf('googtrans=/en/hi') !== -1) {
+							document.getElementById('language-selector').value = 'hi';
+						}
+					});
+				</script>
+				<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			</div>
+
+			<!-- Logo and Text Section -->
+			<div class="logo-text-section">
+				<div class="row custom-row-flex">
+					<div class="logo-text-wrapper">
+						<div class="logo-container">
+							<a href="index.html"><img src="images/logo%20copy.png" alt="IIIT Pune Logo" class="main-logo" /></a>
+						</div>
+						<div class="text-container">
+							<h2 class="hindi-title">भारतीय सूचना प्रौद्योगिकी संस्थान, पुणे</h2>
+							<h3 class="english-title">Indian Institute of Information Technology, Pune</h3>
+							<p class="subtitle">(An Institute of National Importance by an Act of Parliament)</p>
+							<p class="address-text">Gat No - 5 & 6, Vill - Nanoli-Tarf Chakan, PO – Talegaon, Tah – Maval, Dist - Pune, Maharashtra – 410507</p>
+						</div>
+					</div>
+					<div class="constitution-logo-container">
+						<img src="images/constitution_75.png" alt="75 Years of Constitution" class="constitution-logo" />
+					</div>
+				</div>
+			</div>
+
+
+		</header>
+		<!-- Navigation Section -->
+		<div class="nav-section"
+			style="position: sticky; top: 0; z-index: 9999; background-color: #f8f9fa; width: 100%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+			<div class="row">
+				
+				<ul class="main-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#"><i class="fas fa-certificate"
+								style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Admissions</a></li>
+					<li><a href="#">Academics</a></li>
+					<li><a href="#">Research</a></li>
+					<li><a href="#">Student Life</a></li>
+					<li class="has-dropdown"><a href="#">People <i class="fas fa-chevron-down" style="font-size:0.75rem;margin-left:6px;"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="faculty.html">Faculty</a></li>
+							<li><a href="non-teaching-staff.html" class="active">Non Teaching Staff</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Placements</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#"><i class="fas fa-certificate"
+								style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Careers@IIITP</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="#"><i class="fas fa-search"></i></a></li>
+				</ul>
+			</div>
+		</div>
+    <div class="page-content">
+<header><h1><strong>Non-Teaching Staff</strong></h1>
+</header><nav><ul id="alphabet-filter"><li><a data-letter="ALL" class="active">ALL</a></li>
+<li><a data-letter="A">A</a></li>
+<li><a data-letter="B">B</a></li>
+<li><a data-letter="C">C</a></li>
+<li><a data-letter="D">D</a></li>
+<li><a data-letter="E">E</a></li>
+<li><a data-letter="F">F</a></li>
+<li><a data-letter="G">G</a></li>
+<li><a data-letter="H">H</a></li>
+<li><a data-letter="I">I</a></li>
+<li><a data-letter="J">J</a></li>
+<li><a data-letter="K">K</a></li>
+<li><a data-letter="L">L</a></li>
+<li><a data-letter="M">M</a></li>
+<li><a data-letter="N">N</a></li>
+<li><a data-letter="O">O</a></li>
+<li><a data-letter="P">P</a></li>
+<li><a data-letter="Q">Q</a></li>
+<li><a data-letter="R">R</a></li>
+<li><a data-letter="S">S</a></li>
+<li><a data-letter="T">T</a></li>
+<li><a data-letter="U">U</a></li>
+<li><a data-letter="V">V</a></li>
+<li><a data-letter="W">W</a></li>
+<li><a data-letter="X">X</a></li>
+<li><a data-letter="Y">Y</a></li>
+<li><a data-letter="Z">Z</a></li>
+</ul></nav><div class="filters"><select id="department-filter"><option value="ALL">Select Department</option><option value="CSE">CSE</option><option value="ECE">ECE</option><option value="ASH">ASH</option><option value="Academic">Academic</option><option value="Registrar Office">Registrar Office</option><option value="Examination Cell">Examination Cell</option><option value="Library">Library</option><option value="Training &amp; Placement">Training &amp; Placement</option><option value="Accounts and Finance">Accounts and Finance</option><option value="Establishment">Establishment</option><option value="Hostel">Hostel</option><option value="Sports">Sports</option></select></div>
+<div class="staff-list" id="staff-list">
+<div class="staff" data-department="CSE" data-mode="Regular" data-name="Mukesh Nandanwar"><img alt="Mukesh Nandanwar" src="https://www.iiitp.ac.in/sites/default/files/2024-11/Mukesh%20PP.JPG"/><h2><strong>Dr. Mukesh Nandanwar</strong></h2>
+<p><strong>STO</strong><br/>
+Department of Computer Science and Engineering</p>
+<div class="staff-details">
+<p>Dr. Mukesh is responsible for ensuring the smooth functioning, maintenance, and availability of the Institute’s technical infrastructure, laboratories, and equipment, as well as providing technical support to academic and research activities.<br/><a href="mukesh.nandanwar@iiitp.ac.in">mukesh.nandanwar@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Establishment" data-mode="Regular" data-name="Anand Mohan"><img alt="Anand Mohan" src="https://www.iiitp.ac.in/sites/default/files/2024-10/1693993262393%20%284%29%20-%20Junior%20Superintendent%20Establishment.JPG"/><h2><strong>Anand Mohan</strong></h2>
+<p><strong>Jr. Superintendent</strong><br/>
+Establishment</p>
+<div class="staff-details">
+<p>Anand Currently looking after the works related to Establishment matters of the Institution.<br/><a href="mailto:js1.estt@iiitp.ac.in">js1.estt@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Store &amp; Purchase" data-mode="Regular" data-name="Aman Ankur"><img alt="Pankaj Kumar Prasad" src="https://www.iiitp.ac.in/sites/default/files/2025-10/aman%20ankur01.jpg"/><h2><strong>Aman Ankur</strong></h2>
+<p><strong>Jr. Superintendent</strong><br/>
+Store &amp; Purchase</p>
+<div class="staff-details">
+<p>Aman is currently looking after the purchase related matters of the Institute.<br/><a href="mailto:js1.procurement@iiitp.ac.in">js1.procurement@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="ECE" data-mode="Regular" data-name="Prachi Junghare"><img alt="Prachi Junghare" src="https://www.iiitp.ac.in/sites/default/files/2024-09/WhatsApp%20Image%202024-09-13%20at%2010.48.30%20AM%20-%20Prachi%20Junghare.jpeg"/><h2><strong>Prachi Junghare</strong></h2>
+<p><strong>Jr. Technician</strong><br/>
+Department of Electronic and Communication Engineering</p>
+<div class="staff-details">
+<p>Prachi, a dedicated Junior Technician in the ECE department at IIIT Pune, supports lab sessions, maintains and troubleshoots lab equipment, and ensures laboratory safety<br/>
+Contact- <a href="mailto:jt1.ece@iiitp.ac.in">jt1.ece@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Library" data-mode="Regular" data-name="Md Monirul Islam Ansari"><img alt="Md Monirul Islam Ansari" src="https://www.iiitp.ac.in/sites/default/files/2024-12/4Y9A4873_1%20%282%29.jpg"/><h2><strong>Md Monirul Islam Ansari</strong></h2>
+<p><strong>Jr. Technician</strong><br/>
+Library</p>
+<div class="staff-details">
+<p>He is committed to providing efficient library services and stays updated with the latest trends in library and information science to support IIITP's academic community<br/>
+Contact- <a href="mailto:jt.library@iiitp.ac.in">jt.library@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Sports" data-mode="Regular" data-name="Rajat Arvind Khangar"><img alt="Rajat Arvind Khangar" src="https://www.iiitp.ac.in/sites/default/files/2024-09/rajat%20pass%20-%20Sports%20IIIT%20Pune.jpg"/><h2><strong>Rajat Arvind Khangar</strong></h2>
+<p><strong>Physical Training CUM Yoga Instructor</strong><br/>
+Sports</p>
+<div class="staff-details">
+<p><br/><a href="mailto:sports@iiitp.ac.in">sports@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Examination Cell" data-mode="Regular" data-name="Harikrishnan S"><img alt="Harikrishna S" src="https://www.iiitp.ac.in/sites/default/files/2024-09/HARI%20PASS%20PHOTO%20-%20Examination%20Cell%20IIIT%20Pune.jpeg"/><h2>Harikrishnan S</h2>
+<p><strong>Jr. Assistant</strong><br/>
+Examination Cell</p>
+<div class="staff-details">
+<p>Harikrishnan Dedicated and detail-oriented employee with a strong background in administrative support and organizational skills. Adept at using various office softwares and committed to enhance efficiency. Passionate about providing excellent support and contributing to a positive work environment.<br/><a href="mailto:asstt1.examination@iiitp.ac.in">asstt1.examninaton@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Academic" data-mode="Regular" data-name="Sandip Mandal"><img alt="Sandip Mandal" src="https://www.iiitp.ac.in/sites/default/files/2024-09/WhatsApp%20Image%202024-09-06%20at%2017.06.34%20-%20Academics%20IIIT%20Pune.jpeg"/><h2><strong>Sandip Mandal</strong></h2>
+<p><strong>Jr. Assistant</strong><br/>
+Academic</p>
+<div class="staff-details">
+<p><br/>
+Contact- <a href="mailto:asst1.academics@iiitp.ac.in">asst1.academics@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Academic" data-mode="Regular" data-name="Rishika Dakhale"><img alt="Rishika Dakhale" src="https://www.iiitp.ac.in/sites/default/files/2024-09/WhatsApp%20Image%202024-09-12%20at%2010.00.59%20AM%20-%20Academics%20IIIT%20Pune.jpeg"/><h2><strong>Rishika Dakhale</strong></h2>
+<p><strong>Jr. Assistant</strong><br/>
+Academic</p>
+<div class="staff-details">
+<p>Rishika supports academic operations through administrative tasks, scholarship coordination, and student assistance. She also helps with maintaining academic records, oversees the scholarship application process and also maintains student records with proper handling of official documents, ensuring timely processing and confidentiality.<br/><a href="mailto:asst2.academics@iiitp.ac.in">asst2.academics@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Accounts and Finance" data-mode="Regular" data-name="Jai singh"><img alt="Jai singh" src="https://www.iiitp.ac.in/sites/default/files/2025-09/jai%20singh.jpg"/><h2><strong>Jai singh</strong></h2>
+<p><strong>Jr. Assistant</strong><br/>
+Accounts and Finance</p>
+<div class="staff-details">
+<p><br/><a href="mailto:asstt2.accounts@iiitp.ac.in">asstt2.accounts@iiitp.ac.in</a></p>
+</div>
+</div>
+<div class="staff" data-department="Establishment" data-mode="Regular" data-name="Sudarshan Chivate"><img alt="Sudarshan Chivate" src="https://www.iiitp.ac.in/sites/default/files/2025-09/sudarshan_0_0.JPG"/><h2><strong>Sudarshan Chivate</strong></h2>
+<p><strong>Jr. Assistant</strong><br/>
+Establishment</p>
+<div class="staff-details">
+<p>Day to Day Administration related matter.<br/><a href="mailto:asstt1.estt@iiitp.ac.in">asstt1.estt@iiitp.ac.in</a></p>
+</div>
+</div>
+<!-- Staff members go here --></div>
+
+</div>
+<script>
+
+
+
+    const staffList = document.querySelectorAll('.staff');
+    const alphabetFilter = document.getElementById('alphabet-filter');
+    const departmentFilter = document.getElementById('department-filter');
+    let activestaff = null; // Track the active staff profile
+
+    function filterstaff() {
+        const selectedLetter = alphabetFilter.querySelector('a.active')?.dataset?.letter || 'ALL';
+        const selectedDepartment = departmentFilter.value || 'ALL';
+
+        staffList.forEach(staff => {
+            const name = staff.dataset.name.toUpperCase();
+            const department = staff.dataset.department;
+            
+            let isVisible = true;
+
+            // Filter by letter
+            if (selectedLetter !== 'ALL' && !name.startsWith(selectedLetter)) {
+                isVisible = false;
+            }
+
+            // Filter by department
+            if (selectedDepartment !== 'ALL' && department !== selectedDepartment) {
+                isVisible = false;
+            }
+
+            staff.style.display = isVisible ? 'block' : 'none';
+        });
+    }
+
+    alphabetFilter.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            alphabetFilter.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+            e.target.classList.add('active');
+            filterstaff();
+        }
+    });
+
+    departmentFilter.addEventListener('change', filterstaff);
+
+    // Function to handle staff click and toggle details
+    staffList.forEach(staff => {
+        staff.addEventListener('click', function (e) {
+            e.stopPropagation(); // Stop the click event from bubbling up to the document
+            if (staff === activestaff) {
+                // If the same staff is clicked again, close it
+                staff.classList.remove('active');
+                activestaff = null;
+                staffList.forEach(f => f.classList.remove('dimmed')); // Remove dimming
+            } else {
+                // Close any previously active staff
+                if (activestaff) {
+                    activestaff.classList.remove('active');
+                }
+                // Set the clicked staff as active
+                staff.classList.add('active');
+                activestaff = staff;
+
+                // Dim the other staff profiles
+                staffList.forEach(f => {
+                    if (f !== staff) {
+                        f.classList.add('dimmed');
+                    }
+                });
+                staff.classList.remove('dimmed'); // Remove dimming for active staff
+            }
+        });
+    });
+
+    // Close the active staff profile when clicking outside
+    document.addEventListener('click', function () {
+        if (activestaff) {
+            activestaff.classList.remove('active');
+            activestaff = null;
+            staffList.forEach(f => f.classList.remove('dimmed')); // Remove dimming
+        }
+    });
+
+</script>
+
+      <!-- Footer -->
+	<div class="footer">
+		<div class="footerbottom">
+			<div class="row">
+				<div class="medium-6 small-12 columns left-side">
+					<div class="copyrightinfo">© 2026 <a href="#">Indian Institute of Information Technology, Pune</a>.
+						All Rights Reserved.</div>
+				</div><!-- left side /-->
+				<div class="medium-6 small-12 columns right-side">
+					<div class="menu-footer-menu-container">
+						<ul class="menu" id="menu-footer-menu">
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div><!-- Right Side /-->
+			</div><!-- Row /-->
+		</div><!-- footer Bottom /-->
+	</div>
+	<!-- Footer Ends here /-->
+    </div>
+    <a class="animated fadeInUp start-anim" href="#top" id="top"><i class="fas fa-angle-double-up"></i></a>
+
+<script src="js/search.js"></script>
+</body>
+</html>

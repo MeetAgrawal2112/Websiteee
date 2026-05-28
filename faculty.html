@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Faculty Members | IIITP Pune</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="css/css.css" id="google-fonts-css" media="all" rel="stylesheet"/>
+<link href="css/foundation.min.css" id="foundation-css" media="all" rel="stylesheet"/>
+<link href="css/theme-styles.css" id="wc-styles-css" media="all" rel="stylesheet"/>
+<!--Customizer CSS-->
+<style type="text/css">
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		h2 a,
+		h3 a,
+		h4 a,
+		h5 a,
+		h6 a,
+		h1 span,
+		h2 span,
+		h3 span,
+		h4 span,
+		h5 span,
+		.tabs li a,
+		.accordion-title,
+		.pricing-table .title {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.top-bar {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.topBar,
+		.topBar p,
+		.topBar ul li {
+			color: #ffffff;
+		}
+
+		.header .submenu li a,
+		.main-container .top-bar .submenu li a {
+			color: #ffffff !important;
+		}
+
+		.navigation-style-two .is-active .submenu li a:hover,
+		.header .is-active .submenu li a:hover,
+		.top-bar .submenu li a:hover {
+			color: #e85d04 !important;
+		}
+
+		.navigation-style-two,
+		.navigation-style-two .top-bar ul {
+			background-color: #174873;
+		}
+
+		.title-section::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/title-section-background-effect-1-1.jpg);
+		}
+
+		.footer::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/slide1.jpg);
+		}
+
+		.seminar-events::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2016/11/eventsbgbk.jpg);
+		}
+	</style>
+<!--/Customizer CSS-->
+<style>
+
+        .main-nav li { position: relative; }
+        .main-nav .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; }
+        .main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+        .main-nav .has-dropdown:hover .dropdown-menu { display: block; }
+        .main-nav .dropdown-menu li a { display: block; padding: 0.75rem 1rem; color: #111111; text-decoration: none; font-size: 0.95rem; border-bottom: none; }
+        .main-nav .dropdown-menu li a:hover { background: #f8f9fa; color: #e85d04; }
+
+
+        
+        
+        
+        .page-content { padding:0 22px 34px; max-width: 1400px; margin: 0 auto; }
+
+
+
+        /* Premium Filter Styling */
+        .filter-section {
+            padding: 30px 20px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .alphabet-filter-container, #alphabet-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 auto 25px auto;
+            padding: 0;
+            list-style: none;
+            max-width: 1100px;
+        }
+        #alphabet-filter li {
+            margin: 0;
+        }
+        .alphabet-filter-container a, #alphabet-filter a {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 20px;
+            background-color: #f4f6fb;
+            border: 1px solid #eaeaea;
+            color: #174873;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .alphabet-filter-container a:hover, .alphabet-filter-container a.active, #alphabet-filter a:hover, #alphabet-filter a.active {
+            background-color: #e85d04;
+            color: #ffffff;
+            border-color: #e85d04;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.2);
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .filters select {
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            color: #333;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            min-width: 180px;
+            font-family: inherit;
+        }
+        .filters select:hover, .filters select:focus {
+            border-color: #e85d04;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.1);
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(232, 93, 4, 0.15);
+            border-color: #e85d04;
+        }
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+            border-bottom: 3px solid #174873;
+        }
+        .card:hover img {
+            transform: scale(1.03);
+            border-bottom: 3px solid #e85d04;
+        }
+        .card h3 {
+            margin: 15px 15px 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #174873;
+        }
+        .card h3 a, .card h3 strong {
+            font-weight: 600;
+        }
+        .card h3 a {
+            color: #174873;
+            text-decoration: none;
+        }
+        .card h3 a:hover {
+            color: #e85d04;
+        }
+        .card p {
+            margin: 0 15px 15px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .card p strong {
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Your existing CSS styles */
+
+    </style>
+</head>
+<body>
+<div class="main-container">
+<header class="custom-iiitp-header">
+<!-- Top Blue Bar -->
+<div class="top-blue-bar">
+<ul class="social-icons" style="align-items: center;">
+<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+<li style="margin-left: 10px;">
+<select id="language-selector" onchange="changeLanguage(this.value)" style="background: transparent; color: white; border: 1px solid white; padding: 2px 5px; border-radius: 4px; font-size: 12px; cursor: pointer; height: 24px;">
+<option style="color: black;" value="en">English</option>
+<option style="color: black;" value="hi">Hindi</option>
+</select>
+</li>
+</ul>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+					}
+					function changeLanguage(lang) {
+						if(lang === 'hi') {
+							document.cookie = "googtrans=/en/hi; path=/";
+							document.cookie = "googtrans=/en/hi; domain=." + document.domain + "; path=/";
+						} else {
+							document.cookie = "googtrans=/en/en; path=/";
+							document.cookie = "googtrans=/en/en; domain=." + document.domain + "; path=/";
+						}
+						window.location.reload();
+					}
+					// Set dropdown to current language
+					document.addEventListener("DOMContentLoaded", function() {
+						if(document.cookie.indexOf('googtrans=/en/hi') !== -1) {
+							document.getElementById('language-selector').value = 'hi';
+						}
+					});
+				</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</div>
+<!-- Logo and Text Section -->
+<div class="logo-text-section">
+<div class="row custom-row-flex">
+<div class="logo-text-wrapper">
+<div class="logo-container">
+<a href="index.html"><img alt="IIIT Pune Logo" class="main-logo" src="images/logo%20copy.png"/></a>
+</div>
+<div class="text-container">
+<h2 class="hindi-title">भारतीय सूचना प्रौद्योगिकी संस्थान, पुणे</h2>
+<h3 class="english-title">Indian Institute of Information Technology, Pune</h3>
+<p class="subtitle">(An Institute of National Importance by an Act of Parliament)</p>
+<p class="address-text">Gat No - 5 &amp; 6, Vill - Nanoli-Tarf Chakan, PO – Talegaon, Tah – Maval, Dist - Pune, Maharashtra – 410507</p>
+</div>
+</div>
+<div class="constitution-logo-container">
+<img alt="75 Years of Constitution" class="constitution-logo" src="images/constitution_75.png"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Navigation Section -->
+<div class="nav-section" style="position: sticky; top: 0; z-index: 9999; background-color: #f8f9fa; width: 100%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div class="row">
+<ul class="main-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Admissions</a></li>
+<li><a href="#">Academics</a></li>
+<li><a href="#">Research</a></li>
+<li><a href="#">Student Life</a></li>
+<li class="has-dropdown"><a href="#">People <i class="fas fa-chevron-down" style="font-size:0.75rem;margin-left:6px;"></i></a>
+<ul class="dropdown-menu">
+<li><a class="active" href="faculty.html">Faculty</a></li>
+<li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
+</ul>
+</li>
+<li><a href="#">Placements</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Careers@IIITP</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#"><i class="fas fa-search"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="page-content">
+<header><h1><strong>Faculty Members</strong></h1>
+</header><div class="filter-section">
+<div class="alphabet-filter-container"><a class="active" href="#" id="ALL" onclick="filterByLetter('ALL')">ALL</a> <a href="#" id="A" onclick="filterByLetter('A')">A</a> <a href="#" id="B" onclick="filterByLetter('B')">B</a> <a href="#" id="C" onclick="filterByLetter('C')">C</a> <a href="#" id="D" onclick="filterByLetter('D')">D</a> <a href="#" id="E" onclick="filterByLetter('E')">E</a> <a href="#" id="F" onclick="filterByLetter('F')">F</a> <a href="#" id="G" onclick="filterByLetter('G')">G</a> <a href="#" id="H" onclick="filterByLetter('H')">H</a> <a href="#" id="I" onclick="filterByLetter('I')">I</a> <a href="#" id="J" onclick="filterByLetter('J')">J</a> <a href="#" id="K" onclick="filterByLetter('K')">K</a> <a href="#" id="L" onclick="filterByLetter('L')">L</a> <a href="#" id="M" onclick="filterByLetter('M')">M</a> <a href="#" id="N" onclick="filterByLetter('N')">N</a> <a href="#" id="O" onclick="filterByLetter('O')">O</a> <a href="#" id="P" onclick="filterByLetter('P')">P</a> <a href="#" id="Q" onclick="filterByLetter('Q')">Q</a> <a href="#" id="R" onclick="filterByLetter('R')">R</a> <a href="#" id="S" onclick="filterByLetter('S')">S</a> <a href="#" id="T" onclick="filterByLetter('T')">T</a> <a href="#" id="U" onclick="filterByLetter('U')">U</a> <a href="#" id="V" onclick="filterByLetter('V')">V</a> <a href="#" id="W" onclick="filterByLetter('W')">W</a> <a href="#" id="X" onclick="filterByLetter('X')">X</a> <a href="#" id="Y" onclick="filterByLetter('Y')">Y</a> <a href="#" id="Z" onclick="filterByLetter('Z')">Z</a> <!-- Add more letters as needed --></div>
+<div class="filters"><select id="department-filter"><option value="ALL">Select Department</option><option value="CSE">CSE</option><option value="ECE">ECE</option><option value="ASH">ASH</option></select><select id="mode-filter"><option value="ALL">Select Mode</option><option value="Regular">Regular</option><option value="Adjunct">Adjunct</option><option value="On Lien">On Lien</option></select><select id="incharge-filter"><option value="ALL">Select Incharge</option><option value="HOD">HOD</option><option value="Assistant Registrar">Assistant Registrar</option><option value="TPO">TPO</option><option value="Wardan">Warden</option><option value="Chief Wardan">Chief Wardan</option><option value="Associate Dean">Associate Dean</option><option value="Library">Library</option><option value="Website">Website</option><option value="Co-ordinator (PG/ Ph.D.)">Co-ordinator (PG/ Ph.D.)</option><option value="Tenders / Purchase">Tenders / Purchase</option></select></div>
+</div>
+<div class="card-container">
+<div class="card" data-department="CSE" data-incharge="HOD" data-mode="Regular" data-name="Bhupendra Singh"><a href="profile_dr-bhupendra-singh.html"><img alt="Dr. Bhupendra Singh" src="https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_8796-min.JPG"/></a>
+<h3><a href="profile_dr-bhupendra-singh.html"><strong>Dr. Bhupendra Singh</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(HoD CSE)<br/>
+Associate Dean (Infrastructure, Administration &amp; Finance)</strong></p>
+<p>Digital Forensics, Cyber Security, Natural Language Processing</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="Associate Dean" data-mode="Regular" data-name="Sanjeev Sharma"><a href="profile_dr-sanjeev-sharma.html"><img alt="Dr. Sanjeev Sharma" src="https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_8775-min_0.JPG"/></a>
+<h3><a href="profile_dr-sanjeev-sharma.html"><strong>Dr. Sanjeev Sharma</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Associate Dean (Academics)</strong><strong>)</strong></p>
+<p>Artificial Intelligence, Machine Learning, Deep Learning</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="HOD" data-mode="Regular" data-name="Nagendra Kushwaha"><a href="profile_dr-nagendra-kushwaha.html"><img alt="Dr. Nagendra Kushwaha" src="https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_8789-min%20%281%29.JPG"/></a>
+<h3><a href="profile_dr-nagendra-kushwaha.html"><strong>Dr. Nagendra Kushwaha</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(HoD ECE)</strong></p>
+<p>Low-power (SoC) architecture and design, Mixed-signal and analog circuit design, Hardware accelerators and PE array integration</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="Associate Dean" data-mode="Regular" data-name="Sushant Kumar"><a href="profile_dr-sushant-kumar.html"><img alt="Dr. Sushant Kumar" src="https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_9144-min.JPG"/></a>
+<h3><a href="profile_dr-sushant-kumar.html"><strong>Dr. Sushant Kumar</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Associate Dean (R&amp;D and Faculty Welfare))</strong></p>
+<p>Wireless Communication, Synchronization Parameters Estimation, Modulation</p>
+</div>
+<div class="card" data-department="ASH" data-incharge="Library" data-mode="Regular" data-name="Anagha Uday Khiste"><a href="profile_dr-anagha-uday-khiste.html"><img alt="Dr. Anagha Uday Khiste" src="https://www.iiitp.ac.in/sites/default/files/inline-images/Dr%20Anagha%20Khiste-min.jpg"/></a>
+<h3><a href="profile_dr-anagha-uday-khiste.html"><strong>Dr. Anagha Uday Khiste</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Library / Digital Library I/C)</strong></p>
+<p>Algebra, Discrete Mathematics, Lattice theory, Order structure, Graph theory</p>
+</div>
+<div class="card" data-department="ASH" data-incharge="HOD" data-mode="Regular" data-name="Jatin Majithia"><a href="profile_dr-jatin-majithia-0.html"><img alt="Dr. Jatin Majithia" src="https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_9056-min.jpg"/></a>
+<h3><a href="profile_dr-jatin-majithia-0.html"><strong>Dr. Jatin Majithia</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(HoD ASH)</strong></p>
+<p>Commutative Algebra, Graph theory, Lattice theory, Fractional Differential equations</p>
+</div>
+<div class="card" data-department="ASH" data-incharge="" data-mode="Regular" data-name="Chandrakant Narayan Guled"><a href="profile_dr-chandrakant-narayan-guled.html"><img alt="Dr. Chandrakant Narayan Guled" src="https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_9053-min.jpg"/></a>
+<h3><a href="profile_dr-chandrakant-narayan-guled.html"><strong>Dr. Chandrakant Narayan Guled</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+Controller of Examination</strong></p>
+<p>Applied Mathematics, Computational dynamics, Optimization.</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Regular" data-name="Mahendra Pratap Yadav"><a href="profile_dr-mahendra.html"><img alt="Dr.Mahendra Pratap Yadav" src="https://iiitp.ac.in/sites/default/files/2023-02/ph11.JPG"/></a>
+<h3><a href="profile_dr-mahendra.html"><strong>Dr.Mahendra Pratap Yadav</strong></a></h3>
+<p><strong>Assistant Professor </strong></p>
+<p>Cloud Computing, Machine Learning, AI, Data Mining, Software Engineering and Formal Methods</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="Sport" data-mode="Regular" data-name="Shrikant Salve"><a href="profile_dr-shrikant-salve.html"><img alt="Dr. Shrikant Salve" src="https://www.iiitp.ac.in/sites/default/files/2025-04/IMG_6797.jpeg"/></a>
+<h3><a href="profile_dr-shrikant-salve.html"><strong>Dr. Shrikant Salve</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+Sport(I/C)</strong></p>
+<p>Human-Computer Interaction, Usability Engineering, Augmented Reality, User-Centered Deep Learning</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Regular" data-name="Sonam Maurya"><a href="profile_dr-sonam-maurya.html"><img alt="Dr. Sonam Maurya" src="https://iiitp.ac.in/sites/default/files/inline-images/Profile%20Photo_3.jpg"/></a>
+<h3><a href="profile_dr-sonam-maurya.html"><strong>Dr. Sonam Maurya</strong></a></h3>
+<p><strong>Assistant Professor </strong></p>
+<p>Wireless Sensor Network, (IoT), (VANET), Mobile and Wireless Networks, Machine Learning, Deep Learning and Image Processing</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Regular" data-name="Priyank Jain"><a href="profile_dr-priyank-jain.html"><img alt="Dr. Priyank Jain" src="https://www.iiitp.ac.in/sites/default/files/2025-01/Dr.%20Priyank%20pic01.jpg"/></a>
+<h3><a href="profile_dr-priyank-jain.html"><strong>Dr. Priyank Jain</strong></a></h3>
+<p><strong>Assistant Professor </strong></p>
+<p>Data Science, Data Privacy and security, and Machine Learning</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="Wardan" data-mode="Regular" data-name="Dheeraj Dubey"><a href="profile_drdheeraj-dubey.html"><img alt="Dr. Dheeraj Dubey" src="https://www.iiitp.ac.in/sites/default/files/inline-images/20240715170959288_0.jpeg"/></a>
+<h3><a href="profile_drdheeraj-dubey.html"><strong>Dr. Dheeraj Dubey</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Boy's Hostel 1 Warden)</strong></p>
+<p>5G and Beyond, Free Space Optics, Machine Learning, Under Water Communication</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="Assistant Registrar" data-mode="Regular" data-name="Sumit Kumar Gupta"><a href="profile_dr-sumit-kumar-gupta.html"><img alt="Dr. Sumit Kumar Gupta" src="https://www.iiitp.ac.in/sites/default/files/inline-images/sumit%20pic.jpg"/></a>
+<h3><a href="profile_dr-sumit-kumar-gupta.html"><strong>Dr. Sumit Kumar Gupta</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+Assistant Registrar (Academics)</strong></p>
+<p>Community Detection Algorithms, Graph Algorithms, Social Network Analysis, Data Science, Artificial Intelligence and Machine Learning</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="TPO" data-mode="Regular" data-name="Kaptan Singh"><a href="profile_dr-kaptan-singh.html"><img alt="Dr. Kaptan Singh" src="https://www.iiitp.ac.in/sites/default/files/2025-01/Kaptan%20Singh.png"/></a>
+<h3><a href="profile_dr-kaptan-singh.html"><strong>Dr. Kaptan Singh</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Faculty In-charge, TPO)</strong></p>
+<p>Web of Things, Cyber Security, Algorithms, and Theoretical Computer Science</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="Chief Wardan" data-mode="Regular" data-name="Shubham Shukla"><a href="profile_dr-shubam-shukla.html"><img alt="Dr. Shubam Shukla" src="https://www.iiitp.ac.in/sites/default/files/inline-images/Screenshot%202024-07-16%20at%203.19.41%20PM.png"/></a>
+<h3><a href="profile_dr-shubam-shukla.html"><strong>Dr. Shubham Shukla</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Chief Warden)</strong></p>
+<p>Robot Path Planning , Nature Inspired Optimisation technique,Microcontrollers and Embedded Systems &amp; Design</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="" data-mode="Regular" data-name="Dipen Bepari"><a href="profile_dr-dipen-bepari.html"><img alt="Dr. Dipen Bepari" src="https://www.iiitp.ac.in/sites/default/files/2024-07/Dipen%20Bepari.jpg"/></a>
+<h3><a href="profile_dr-dipen-bepari.html"><strong>Dr. Dipen Bepari</strong></a></h3>
+<p><strong>Assistant Professor </strong></p>
+<p>Cognitive Radio, NOMA, IRS, Energy Harvesting, 5G and beyond communications</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="Website" data-mode="Regular" data-name="Shivangi Shukla"><a href="profile_dr-shivangi-shukla.html"><img alt="Dr. Shivangi Shukla" src="https://www.iiitp.ac.in/sites/default/files/2024-07/Shivangi.jpg"/></a>
+<h3><a href="profile_dr-shivangi-shukla.html"><strong>Dr. Shivangi Shukla</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Website I/C)</strong></p>
+<p>Information Security, Privacy, Cloud Computing Security, and Security and Privacy in Internet of Things.</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="" data-mode="Regular" data-name="KM Divya Chaturvedi"><a href="profile_dr-km-divya-chaturvedi.html"><img alt="Dr. KM Divya Chaturvedi" src="https://www.iiitp.ac.in/sites/default/files/2024-07/410167717_3485636961747276_822957193122217876_n.jpg"/></a>
+<h3><a href="profile_dr-km-divya-chaturvedi.html"><strong>Dr. KM Divya Chaturvedi</strong></a></h3>
+<p><strong>Assistant Professor </strong></p>
+<p>SIW-based Cavity-backed Multi-band Antennas with Intrinsically Isolated Ports and Smart Antenna Design with IoT-enabled devices.</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="Wardan" data-mode="Regular" data-name="Habila Basumatary"><a href="profile_dr-habila-basumatary.html"><img alt="Dr. Habila Basumatary" src="https://www.iiitp.ac.in/sites/default/files/2024-08/image%20%281%29%20%282%29.png"/></a>
+<h3><a href="profile_dr-habila-basumatary.html"><strong>Dr. Habila Basumatary</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+(Girls' Hostel Warden)</strong></p>
+<p>Cyber Security in IoT, Smart Micro-Grids, EV Charging, and Energy Efficiency in WSN.</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Regular" data-name="Sanga Chaki"><a href="profile_dr-sanga-chaki.html"><img alt="Dr. Sanga Chaki" src="https://www.iiitp.ac.in/sites/default/files/2024-08/Sanga_Chaki%20-%20Copy.jpg"/></a>
+<h3><a href="profile_dr-sanga-chaki.html"><strong>Dr. Sanga Chaki</strong></a></h3>
+<p><strong>Assistant Professor </strong></p>
+<p>Machine Learning, Deep Learning, Affective Computing, Sound and Music Computing, and Trustworthy</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="Wardan" data-mode="Regular" data-name="Mahesh Joshi"><a href="profile_dr-mahesh-joshi.html"><img alt="Dr. Mahesh Joshi" src="https://www.iiitp.ac.in/sites/default/files/2024-08/Mahesh_Joshi_0.JPG"/></a>
+<h3><a href="profile_dr-mahesh-joshi.html"><strong>Dr. Mahesh Joshi</strong></a></h3>
+<p><strong>Assistant Professor<br/>
+Co-ordinator (PG/ Ph.D.)<br/>
+(Boys' Hostel 2 Warden)</strong></p>
+<p>Biometric authentication, Partial fingerprint Identification, Biometric Security, Internet-of-Things (IoT) security.</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="" data-mode="Adjunct" data-name="Mohammad Akhlaqur Rahman"><a href="profile_dr-mohammad-akhlaqur-rahman.html"><img alt="Dr. Mohammad Akhlaqur Rahman" src="https://iiitp.ac.in/sites/default/files/2024-01/DrMARahman_01-removebg-preview.png"/></a>
+<h3><a href="profile_dr-mohammad-akhlaqur-rahman.html"><strong>Dr. Mohammad Akhlaqur Rahman</strong></a></h3>
+<p><strong>Adjunct Assistant Professor </strong></p>
+<p>Medical Image Processing.</p>
+</div>
+<div class="card" data-department="ASH" data-incharge="" data-mode="Adjunct" data-name="Sakshi Semwal"><a href="profile_dr-sakshi-semwal.html"><img alt="Dr. Sakshi Semwal" src="https://iiitp.ac.in/sites/default/files/2024-01/IMG_20240116_105326.jpg"/></a>
+<h3><a href="profile_dr-sakshi-semwal.html"><strong>Dr. Sakshi Semwal</strong></a></h3>
+<p><strong>Adjunct Assistant Professor</strong></p>
+<p>Magical Realism in South Asian literature. Postcolonial Studies, Gender Studies, Anglophone Literature</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Anu Priya"><a href="profile_ms-anu-priya.html"><img alt="Ms. Anu Priya" src="https://iiitp.ac.in/sites/default/files/2024-01/Image_Anu%20Priya.jpg"/></a>
+<h3><a href="profile_ms-anu-priya.html"><strong>Ms. Anu Priya</strong></a></h3>
+<p><strong>Adjunct Assistant Professor </strong></p>
+<p>Image Processing, Computer Vision, Deep Learning, Deep Reinforcement Learning, Robot Path Planning.</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Priyanka Joshi"><a href="profile_dr-priyanka-joshi.html"><img alt="Dr. Priyanka Joshi" src="https://www.iiitp.ac.in/sites/default/files/2025-01/PriyankaJoshi1_0.jpeg"/></a>
+<h3><a href="profile_dr-priyanka-joshi.html"><strong>Dr. Priyanka Joshi</strong></a></h3>
+<p><strong>Adjunct Assistant Professor </strong></p>
+<p>Hardware security, Cyber security, Internet-of-Things (IoT) security, and Multi-agent security.</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Shamal Kashid"><a href="profile_ms-shamal-kashid.html"><img alt="Ms. Shamal Kashid" src="https://www.iiitp.ac.in/sites/default/files/2025-01/ProfilePhoto.jpeg"/></a>
+<h3><a href="profile_ms-shamal-kashid.html"><strong>Ms. Shamal Kashid</strong></a></h3>
+<p><strong>Adjunct Assistant Professor </strong></p>
+<p>Machine Learning, Deep Learning, Multimedia Security, Multimedia Summarization</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Anupama Arun"><a href="profile_ms-anupama-arun.html"><img alt="Ms. Anupama Arun" src="https://www.iiitp.ac.in/sites/default/files/2025-01/IMG_20200223_141342.jpg"/></a>
+<h3><a href="profile_ms-anupama-arun.html"><strong>Ms. Anupama Arun</strong></a></h3>
+<p><strong>Adjunct Assistant Professor </strong></p>
+<p>Machine Learning and Deep Learning</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Priya Jadhav"><a href="profile_ms-priya-jadhav.html"><img alt="Ms. Priya Jadhav" src="https://www.iiitp.ac.in/sites/default/files/2025-08/priya%20photo.jpeg"/></a>
+<h3><a href="profile_ms-priya-jadhav.html"><strong>Ms. Priya Jadhav</strong></a></h3>
+<p><strong>Adjunct Assistant Professor </strong></p>
+<p>Machine Learning, Mixed Reality- AR,VR and HCI</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Sabah Tazeen"><a href="profile_ms-sabah-tazeen.html"><img alt="Ms. Sabah Tazeen" src="https://www.iiitp.ac.in/sites/default/files/2025-10/SabahTazeen.jpeg"/></a>
+<h3><a href="profile_ms-sabah-tazeen.html"><strong>Ms. Sabah Tazeen</strong></a></h3>
+<p><strong>Adjunct Assistant Professor </strong></p>
+<p>Data Gathering and Recharging in Wireless Sensor Networks</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="" data-mode="Adjunct" data-name="Ashish Singh"><a href="profile_dr-ashish-singh.html"><img alt="Ashish Singh" src="https://www.iiitp.ac.in/sites/default/files/2026-01/PHOTOGRAPH_Website.jpg"/></a>
+<h3><a href="profile_dr-ashish-singh.html"><strong>Dr. Ashish Singh</strong></a></h3>
+<p><strong>Adjunct Assistant Professor</strong></p>
+<p>VLSI Interconnects</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Yashdeep Singh"><a href="profile_mr-yashdeep-singh.html"><img alt="Yashdeep Singh" src="https://www.iiitp.ac.in/sites/default/files/2026-02/Yashdeep_Singh.jpeg"/></a>
+<h3><a href="profile_mr-yashdeep-singh.html"><strong>Mr. Yashdeep Singh</strong></a></h3>
+<p><strong>Adjunct Assistant Professor</strong></p>
+<p>Theoretical Computer Science, Graph Theory, Algorithms</p>
+</div>
+<div class="card" data-department="ASH" data-incharge="" data-mode="Adjunct" data-name="Sohini Gayen"><a href="profile_dr-sohini-gayen.html"><img alt="Sohini Gayen" src="https://www.iiitp.ac.in/sites/default/files/2026-02/Dr.%20Sohini%20Gayenpic.jpeg"/></a>
+<h3><a href="profile_dr-sohini-gayen.html"><strong>Dr. Sohini Gayen</strong></a></h3>
+<p><strong>Adjunct Assistant Professor</strong></p>
+<p>English Literature</p>
+</div>
+<div class="card" data-department="ECE" data-incharge="" data-mode="Adjunct" data-name="Tushar Prakash Gawande"><a href="profile_dr-tushar-prakash-gawande.html"><img alt="Tushar Prakash Gawande" src="https://www.iiitp.ac.in/sites/default/files/2026-02/Tushar%20Prakash%20Gawande.png"/></a>
+<h3><a href="profile_dr-tushar-prakash-gawande.html"><strong>Dr. Tushar Prakash Gawande</strong></a></h3>
+<p><strong>Adjunct Assistant Professor</strong></p>
+<p>Embedded system design, VLSI Design, Data analysis</p>
+</div>
+<div class="card" data-department="CSE" data-incharge="" data-mode="Adjunct" data-name="Manish Kumar"><a href="profile_mr-manish-kumar.html"><img alt="Manish Kumar" src="https://www.iiitp.ac.in/sites/default/files/2026-03/Manish_profile_pic.jpeg"/></a>
+<h3><a href="profile_mr-manish-kumar.html"><strong>Mr. Manish Kumar</strong></a></h3>
+<p><strong>Adjunct Assistant Professor</strong></p>
+<p>Machine Learning &amp; Deep learning, Autonomous vehicles vision system</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer">
+<div class="footerbottom">
+<div class="row">
+<div class="medium-6 small-12 columns left-side">
+<div class="copyrightinfo">© 2026 <a href="#">Indian Institute of Information Technology, Pune</a>.
+						All Rights Reserved.</div>
+</div><!-- left side /-->
+<div class="medium-6 small-12 columns right-side">
+<div class="menu-footer-menu-container">
+<ul class="menu" id="menu-footer-menu">
+<li><a href="#">Terms of Use</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div><!-- Right Side /-->
+</div><!-- Row /-->
+</div><!-- footer Bottom /-->
+</div>
+<!-- Footer Ends here /-->
+</div>
+<a class="animated fadeInUp start-anim" href="#top" id="top"><i class="fas fa-angle-double-up"></i></a>
+<script>
+
+
+
+        const staffList = document.querySelectorAll('.card');
+        const departmentFilter = document.getElementById('department-filter');
+        const modeFilter = document.getElementById('mode-filter');
+        const inchargeFilter = document.getElementById('incharge-filter');
+        let selectedLetter = 'ALL';
+
+        function filterstaff() {
+            const selectedDepartment = departmentFilter.value || 'ALL';
+            const selectedMode = modeFilter.value || 'ALL';
+            const selectedIncharge = inchargeFilter.value || 'ALL';
+
+            const container = document.querySelector('.card-container');
+            const visibleCards = [];
+
+            staffList.forEach(card => {
+                const name = card.dataset.name.toUpperCase();
+                const department = card.dataset.department;
+                const mode = card.dataset.mode;
+                const incharge = card.dataset.incharge;
+
+                let isVisible = true;
+
+                // Filter by letter
+                if (selectedLetter !== 'ALL' && !name.startsWith(selectedLetter)) {
+                    isVisible = false;
+                }
+
+                // Filter by department
+                if (selectedDepartment !== 'ALL' && department !== selectedDepartment) {
+                    isVisible = false;
+                }
+
+                // Filter by mode
+                if (selectedMode !== 'ALL' && mode !== selectedMode) {
+                    isVisible = false;
+                }
+
+                // Filter by incharge
+                if (selectedIncharge !== 'ALL' && incharge !== selectedIncharge) {
+                    isVisible = false;
+                }
+
+                card.style.display = isVisible ? 'block' : 'none';
+                if (isVisible) visibleCards.push(card);
+            });
+
+            // Sort visible cards only if a department is selected
+            if (selectedDepartment !== 'ALL') {
+                visibleCards.sort((a, b) => {
+                    const isAHoD = a.dataset.incharge === 'HOD' ? 1 : 0;
+                    const isBHoD = b.dataset.incharge === 'HOD' ? 1 : 0;
+
+                    // HoD comes first if applicable
+                    if (isBHoD !== isAHoD) {
+                        return isBHoD - isAHoD;
+                    }
+                    return 0;
+                });
+            }
+
+            // Clear and re-render sorted cards
+            container.innerHTML = '';
+            visibleCards.forEach(card => container.appendChild(card));
+        }
+
+        function filterByLetter(letter) {
+            selectedLetter = letter;
+            document.querySelectorAll('.filter-section a').forEach(a => a.classList.remove('active'));
+            document.getElementById(letter).classList.add('active');
+            filterstaff();
+        }
+
+        // Attach event listeners to filters
+        departmentFilter.addEventListener('change', filterstaff);
+        modeFilter.addEventListener('change', filterstaff);
+        inchargeFilter.addEventListener('change', filterstaff);
+    
+
+
+</script>
+<script src="js/search.js"></script>
+</body>
+</html>

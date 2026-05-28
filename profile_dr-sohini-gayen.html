@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Faculty Members | IIITP Pune</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="css/css.css" id="google-fonts-css" media="all" rel="stylesheet"/>
+<link href="css/foundation.min.css" id="foundation-css" media="all" rel="stylesheet"/>
+<link href="css/theme-styles.css" id="wc-styles-css" media="all" rel="stylesheet"/>
+<!--Customizer CSS-->
+<style type="text/css">
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		h2 a,
+		h3 a,
+		h4 a,
+		h5 a,
+		h6 a,
+		h1 span,
+		h2 span,
+		h3 span,
+		h4 span,
+		h5 span,
+		.tabs li a,
+		.accordion-title,
+		.pricing-table .title {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.top-bar {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.topBar,
+		.topBar p,
+		.topBar ul li {
+			color: #ffffff;
+		}
+
+		.header .submenu li a,
+		.main-container .top-bar .submenu li a {
+			color: #ffffff !important;
+		}
+
+		.navigation-style-two .is-active .submenu li a:hover,
+		.header .is-active .submenu li a:hover,
+		.top-bar .submenu li a:hover {
+			color: #e85d04 !important;
+		}
+
+		.navigation-style-two,
+		.navigation-style-two .top-bar ul {
+			background-color: #174873;
+		}
+
+		.title-section::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/title-section-background-effect-1-1.jpg);
+		}
+
+		.footer::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/slide1.jpg);
+		}
+
+		.seminar-events::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2016/11/eventsbgbk.jpg);
+		}
+	</style>
+<!--/Customizer CSS-->
+<style>
+
+        .main-nav li { position: relative; }
+        .main-nav .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; }
+        .main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+        .main-nav .has-dropdown:hover .dropdown-menu { display: block; }
+        .main-nav .dropdown-menu li a { display: block; padding: 0.75rem 1rem; color: #111111; text-decoration: none; font-size: 0.95rem; border-bottom: none; }
+        .main-nav .dropdown-menu li a:hover { background: #f8f9fa; color: #e85d04; }
+
+
+        
+        
+        
+        .page-content { padding:0 22px 34px; max-width: 1400px; margin: 0 auto; }
+
+
+
+        /* Premium Filter Styling */
+        .filter-section {
+            padding: 30px 20px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .alphabet-filter-container, #alphabet-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 auto 25px auto;
+            padding: 0;
+            list-style: none;
+            max-width: 1100px;
+        }
+        #alphabet-filter li {
+            margin: 0;
+        }
+        .alphabet-filter-container a, #alphabet-filter a {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 20px;
+            background-color: #f4f6fb;
+            border: 1px solid #eaeaea;
+            color: #174873;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .alphabet-filter-container a:hover, .alphabet-filter-container a.active, #alphabet-filter a:hover, #alphabet-filter a.active {
+            background-color: #e85d04;
+            color: #ffffff;
+            border-color: #e85d04;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.2);
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .filters select {
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            color: #333;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            min-width: 180px;
+            font-family: inherit;
+        }
+        .filters select:hover, .filters select:focus {
+            border-color: #e85d04;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.1);
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(232, 93, 4, 0.15);
+            border-color: #e85d04;
+        }
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+            border-bottom: 3px solid #174873;
+        }
+        .card:hover img {
+            transform: scale(1.03);
+            border-bottom: 3px solid #e85d04;
+        }
+        .card h3 {
+            margin: 15px 15px 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #174873;
+        }
+        .card h3 a, .card h3 strong {
+            font-weight: 600;
+        }
+        .card h3 a {
+            color: #174873;
+            text-decoration: none;
+        }
+        .card h3 a:hover {
+            color: #e85d04;
+        }
+        .card p {
+            margin: 0 15px 15px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .card p strong {
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Your existing CSS styles */
+
+    </style>
+
+    <style>
+    .page-content {
+        padding: 40px 22px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .premium-profile-page {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .profile-header-card {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        border-top: 5px solid #174873;
+        margin-bottom: 40px;
+    }
+    .profile-image-container img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #f4f6fb;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .profile-info-container {
+        flex: 1;
+    }
+    .profile-info-container h1 {
+        color: #174873;
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-size: 2.2rem;
+    }
+    .profile-details-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .profile-details-list li {
+        font-size: 1.05rem;
+        color: #444;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        position: relative;
+        padding-left: 30px;
+    }
+    .profile-details-list li::before {
+        content: "\f058"; /* Check circle */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: #e85d04;
+        font-size: 1.1rem;
+    }
+    .profile-details-list li strong {
+        color: #174873;
+        font-weight: 600;
+        display: inline-block;
+        min-width: 140px;
+    }
+    .profile-details-list a {
+        color: #e85d04;
+        text-decoration: none;
+        word-break: break-all;
+    }
+    .profile-details-list a:hover {
+        text-decoration: underline;
+    }
+    
+    .profile-body-card {
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        margin-bottom: 50px;
+    }
+    .profile-body-card h2 {
+        color: #174873;
+        border-bottom: 2px solid #f4f6fb;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        margin-top: 35px;
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+    .profile-body-card h2:first-child {
+        margin-top: 0;
+    }
+    .profile-body-card h2 i {
+        color: #e85d04;
+        margin-right: 10px;
+    }
+    .biography-text {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+    }
+    .biography-text p {
+        margin-bottom: 20px;
+    }
+    
+    .profile-links-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .profile-links-list li {
+        background: #f4f6fb;
+        padding: 15px 20px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        border-left: 4px solid #174873;
+        transition: transform 0.3s;
+    }
+    .profile-links-list li:hover {
+        transform: translateX(5px);
+        border-left-color: #e85d04;
+    }
+    .profile-links-list li i {
+        font-size: 1.5rem;
+        color: #174873;
+        margin-right: 20px;
+        width: 30px;
+        text-align: center;
+    }
+    .profile-links-list li .link-label {
+        font-weight: 600;
+        color: #333;
+        font-size: 1.1rem;
+        width: 150px;
+    }
+    .profile-links-list li a {
+        color: #e85d04;
+        text-decoration: none;
+        font-weight: 500;
+        word-break: break-all;
+    }
+    .profile-links-list li a:hover {
+        text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+        .profile-header-card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .profile-details-list li {
+            text-align: left;
+        }
+        .profile-links-list li {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        .profile-links-list li i {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        .profile-links-list li .link-label {
+            width: auto;
+            margin-bottom: 10px;
+        }
+    }
+    </style>
+    
+</head>
+<body>
+<div class="main-container">
+<header class="custom-iiitp-header">
+<!-- Top Blue Bar -->
+<div class="top-blue-bar">
+<ul class="social-icons" style="align-items: center;">
+<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+<li style="margin-left: 10px;">
+<select id="language-selector" onchange="changeLanguage(this.value)" style="background: transparent; color: white; border: 1px solid white; padding: 2px 5px; border-radius: 4px; font-size: 12px; cursor: pointer; height: 24px;">
+<option style="color: black;" value="en">English</option>
+<option style="color: black;" value="hi">Hindi</option>
+</select>
+</li>
+</ul>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+					}
+					function changeLanguage(lang) {
+						if(lang === 'hi') {
+							document.cookie = "googtrans=/en/hi; path=/";
+							document.cookie = "googtrans=/en/hi; domain=." + document.domain + "; path=/";
+						} else {
+							document.cookie = "googtrans=/en/en; path=/";
+							document.cookie = "googtrans=/en/en; domain=." + document.domain + "; path=/";
+						}
+						window.location.reload();
+					}
+					// Set dropdown to current language
+					document.addEventListener("DOMContentLoaded", function() {
+						if(document.cookie.indexOf('googtrans=/en/hi') !== -1) {
+							document.getElementById('language-selector').value = 'hi';
+						}
+					});
+				</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</div>
+<!-- Logo and Text Section -->
+<div class="logo-text-section">
+<div class="row custom-row-flex">
+<div class="logo-text-wrapper">
+<div class="logo-container">
+<a href="index.html"><img alt="IIIT Pune Logo" class="main-logo" src="images/logo%20copy.png"/></a>
+</div>
+<div class="text-container">
+<h2 class="hindi-title">भारतीय सूचना प्रौद्योगिकी संस्थान, पुणे</h2>
+<h3 class="english-title">Indian Institute of Information Technology, Pune</h3>
+<p class="subtitle">(An Institute of National Importance by an Act of Parliament)</p>
+<p class="address-text">Gat No - 5 &amp; 6, Vill - Nanoli-Tarf Chakan, PO – Talegaon, Tah – Maval, Dist - Pune, Maharashtra – 410507</p>
+</div>
+</div>
+<div class="constitution-logo-container">
+<img alt="75 Years of Constitution" class="constitution-logo" src="images/constitution_75.png"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Navigation Section -->
+<div class="nav-section" style="position: sticky; top: 0; z-index: 9999; background-color: #f8f9fa; width: 100%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div class="row">
+<ul class="main-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Admissions</a></li>
+<li><a href="#">Academics</a></li>
+<li><a href="#">Research</a></li>
+<li><a href="#">Student Life</a></li>
+<li class="has-dropdown"><a href="#">People <i class="fas fa-chevron-down" style="font-size:0.75rem;margin-left:6px;"></i></a>
+<ul class="dropdown-menu">
+<li><a class="active" href="faculty.html">Faculty</a></li>
+<li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
+</ul>
+</li>
+<li><a href="#">Placements</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Careers@IIITP</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#"><i class="fas fa-search"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="page-content premium-profile-page">
+
+        <div class="profile-header-card">
+            <div class="profile-image-container">
+                <img src="https://www.iiitp.ac.in/sites/default/files/2026-02/Dr.%20Sohini%20Gayenpic.jpeg" alt="Dr. Sohini Gayen">
+            </div>
+            <div class="profile-info-container">
+                <h1>Dr. Sohini Gayen</h1>
+                <ul class="profile-details-list">
+                    <li><strong>Designation: </strong>Adjunct Assistant Professor</li>
+<li><strong>Educational Qualification Ph.D.: </strong>Indian Institute of Technology Gandhinagar, 2025<br/><strong>M.A. (English Literature):</strong> M.A. (English Literature): The English and Foreign Languages University, Hyderabad, 2019</li>
+<li><strong>B.A. (English): </strong>B.A. (English): Banaras Hindu University, Varanasi, 2017</li>
+<li><strong>Email: </strong><a href="mailto:sohini@iiitp.ac.in">sohini@iiitp.ac.in</a></li>
+<li><strong>Phone</strong><a href="tel:+91-8902352889" target="_blank">+91-8902352889</a></li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="profile-body-card">
+        
+            <h2><i class="fas fa-user-tie"></i> Biography & Research</h2>
+            <div class="biography-text">
+                <div property="schema:text"><div id="wrapper">
+<div class="container" id="skip-content">
+<div class="row layout">
+<div class="content_layout">
+<div class="col-md-12">
+<div class="region region-content">
+<div class="views-element-container">
+<div class="faculty-inner js-view-dom-id-7879a80cc13696e97aacc89eed820ee58739f18138e2efd5778fa344ebeaef13">
+<header> </header><div class="views-row">
+<div class="views-field views-field-nothing-1">
+<div class="faculty-profile">
+
+<div>
+<div>
+
+
+<p><strong>Dr. Sohini Gayen</strong> is an Adjunct Assistant Professor in the Department of Applied Science and Humanities at IIIT Pune. She holds a Ph.D. from the Indian Institute of Technology Gandhinagar, Gujarat. At IIT Gandhinagar, she was working as a UGC Senior Research Fellow.  Her research interests include Comparative Literature, Bakhtin Studies and Short-stories of rural India. Her work has been published in reputed peer-reviewed journals, including Short Fiction in Theory &amp; Practice, Asian Literature and Translation (ALT), and The IACLALS Journal: Indian Association for Commonwealth Literature and Language Studies. Dr. Gayen has also presented her doctoral research at several national and international conferences. </p>
+
+
+
+<div class="faculty-attachments"> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            </div>
+            
+            <h2><i class="fas fa-link"></i> Academic Profiles & Links</h2>
+            <ul class="profile-links-list">
+                <li><i class="fab fa-google"></i> <span class="link-label">Google Scholar:</span> <a href="https://scholar.google.com/citations?user=7p9TUWIAAAAJ&hl=en" target="_blank">https://scholar.google.com/citations?user=7p9TUWIAAAAJ&hl=en</a></li>
+<li><i class="fab fa-orcid"></i> <span class="link-label">ORCID:</span> <a href="https://orcid.org/0000-0001-8119-3470" target="_blank">https://orcid.org/0000-0001-8119-3470</a></li>
+<li><i class="fas fa-file-pdf"></i> <span class="link-label">Resume:</span> <a href="https://www.iiitp.ac.in/sites/default/files/2026-02/Dr.%20Sohini%20Gayen_Resume.pdf" target="_blank">https://www.iiitp.ac.in/sites/default/files/2026-02/Dr.%20Sohini%20Gayen_Resume.pdf</a></li>
+
+            </ul>
+            
+        </div>
+        </div>
+        <!-- Footer -->
+<div class="footer">
+<div class="footerbottom">
+<div class="row">
+<div class="medium-6 small-12 columns left-side">
+<div class="copyrightinfo">© 2026 <a href="#">Indian Institute of Information Technology, Pune</a>.
+						All Rights Reserved.</div>
+</div><!-- left side /-->
+<div class="medium-6 small-12 columns right-side">
+<div class="menu-footer-menu-container">
+<ul class="menu" id="menu-footer-menu">
+<li><a href="#">Terms of Use</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div><!-- Right Side /-->
+</div><!-- Row /-->
+</div><!-- footer Bottom /-->
+</div>
+<!-- Footer Ends here /-->
+</div>
+<a class="animated fadeInUp start-anim" href="#top" id="top"><i class="fas fa-angle-double-up"></i></a>
+<script>
+
+
+
+        const staffList = document.querySelectorAll('.card');
+        const departmentFilter = document.getElementById('department-filter');
+        const modeFilter = document.getElementById('mode-filter');
+        const inchargeFilter = document.getElementById('incharge-filter');
+        let selectedLetter = 'ALL';
+
+        function filterstaff() {
+            const selectedDepartment = departmentFilter.value || 'ALL';
+            const selectedMode = modeFilter.value || 'ALL';
+            const selectedIncharge = inchargeFilter.value || 'ALL';
+
+            const container = document.querySelector('.card-container');
+            const visibleCards = [];
+
+            staffList.forEach(card => {
+                const name = card.dataset.name.toUpperCase();
+                const department = card.dataset.department;
+                const mode = card.dataset.mode;
+                const incharge = card.dataset.incharge;
+
+                let isVisible = true;
+
+                // Filter by letter
+                if (selectedLetter !== 'ALL' && !name.startsWith(selectedLetter)) {
+                    isVisible = false;
+                }
+
+                // Filter by department
+                if (selectedDepartment !== 'ALL' && department !== selectedDepartment) {
+                    isVisible = false;
+                }
+
+                // Filter by mode
+                if (selectedMode !== 'ALL' && mode !== selectedMode) {
+                    isVisible = false;
+                }
+
+                // Filter by incharge
+                if (selectedIncharge !== 'ALL' && incharge !== selectedIncharge) {
+                    isVisible = false;
+                }
+
+                card.style.display = isVisible ? 'block' : 'none';
+                if (isVisible) visibleCards.push(card);
+            });
+
+            // Sort visible cards only if a department is selected
+            if (selectedDepartment !== 'ALL') {
+                visibleCards.sort((a, b) => {
+                    const isAHoD = a.dataset.incharge === 'HOD' ? 1 : 0;
+                    const isBHoD = b.dataset.incharge === 'HOD' ? 1 : 0;
+
+                    // HoD comes first if applicable
+                    if (isBHoD !== isAHoD) {
+                        return isBHoD - isAHoD;
+                    }
+                    return 0;
+                });
+            }
+
+            // Clear and re-render sorted cards
+            container.innerHTML = '';
+            visibleCards.forEach(card => container.appendChild(card));
+        }
+
+        function filterByLetter(letter) {
+            selectedLetter = letter;
+            document.querySelectorAll('.filter-section a').forEach(a => a.classList.remove('active'));
+            document.getElementById(letter).classList.add('active');
+            filterstaff();
+        }
+
+        // Attach event listeners to filters
+        departmentFilter.addEventListener('change', filterstaff);
+        modeFilter.addEventListener('change', filterstaff);
+        inchargeFilter.addEventListener('change', filterstaff);
+    
+
+
+</script>
+<script src="js/search.js"></script>
+</body>
+</html>
