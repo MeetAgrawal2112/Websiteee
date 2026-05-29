@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sports | IIITP Pune</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="css/css.css" id="google-fonts-css" media="all" rel="stylesheet"/>
+<link href="css/foundation.min.css" id="foundation-css" media="all" rel="stylesheet"/>
+<link href="css/theme-styles.css" id="wc-styles-css" media="all" rel="stylesheet"/>
+<!--Customizer CSS-->
+<style type="text/css">
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		h2 a,
+		h3 a,
+		h4 a,
+		h5 a,
+		h6 a,
+		h1 span,
+		h2 span,
+		h3 span,
+		h4 span,
+		h5 span,
+		.tabs li a,
+		.accordion-title,
+		.pricing-table .title {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.top-bar {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.topBar,
+		.topBar p,
+		.topBar ul li {
+			color: #ffffff;
+		}
+
+		.header .submenu li a,
+		.main-container .top-bar .submenu li a {
+			color: #ffffff !important;
+		}
+
+		.navigation-style-two .is-active .submenu li a:hover,
+		.header .is-active .submenu li a:hover,
+		.top-bar .submenu li a:hover {
+			color: #e85d04 !important;
+		}
+
+		.navigation-style-two,
+		.navigation-style-two .top-bar ul {
+			background-color: #174873;
+		}
+
+		.title-section::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/title-section-background-effect-1-1.jpg);
+		}
+
+		.footer::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/slide1.jpg);
+		}
+
+		.seminar-events::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2016/11/eventsbgbk.jpg);
+		}
+	</style>
+<!--/Customizer CSS-->
+<style>
+
+        .main-nav li { position: relative; }
+					.main-nav .dropdown-menu { display: block; visibility: hidden; opacity: 0; position: absolute; top: 120%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); pointer-events: none; transform: translateY(10px); }
+					.main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+					.main-nav .has-dropdown:hover .dropdown-menu { visibility: visible; opacity: 1; top: 100%; pointer-events: auto; transform: translateY(0); }
+        .main-nav .dropdown-menu li a { display: block; padding: 0.75rem 1rem; color: #111111; text-decoration: none; font-size: 0.95rem; border-bottom: none; }
+        .main-nav .dropdown-menu li a:hover { background: #f8f9fa; color: #e85d04; }
+
+
+        
+        
+        
+        .page-content { padding:0 22px 34px; max-width: 1400px; margin: 0 auto; }
+
+
+
+        /* Premium Filter Styling */
+        .filter-section {
+            padding: 30px 20px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .alphabet-filter-container, #alphabet-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 auto 25px auto;
+            padding: 0;
+            list-style: none;
+            max-width: 1100px;
+        }
+        #alphabet-filter li {
+            margin: 0;
+        }
+        .alphabet-filter-container a, #alphabet-filter a {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 20px;
+            background-color: #f4f6fb;
+            border: 1px solid #eaeaea;
+            color: #174873;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .alphabet-filter-container a:hover, .alphabet-filter-container a.active, #alphabet-filter a:hover, #alphabet-filter a.active {
+            background-color: #e85d04;
+            color: #ffffff;
+            border-color: #e85d04;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.2);
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .filters select {
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            color: #333;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            min-width: 180px;
+            font-family: inherit;
+        }
+        .filters select:hover, .filters select:focus {
+            border-color: #e85d04;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.1);
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(232, 93, 4, 0.15);
+            border-color: #e85d04;
+        }
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+            border-bottom: 3px solid #174873;
+        }
+        .card:hover img {
+            transform: scale(1.03);
+            border-bottom: 3px solid #e85d04;
+        }
+        .card h3 {
+            margin: 15px 15px 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #174873;
+        }
+        .card h3 a, .card h3 strong {
+            font-weight: 600;
+        }
+        .card h3 a {
+            color: #174873;
+            text-decoration: none;
+        }
+        .card h3 a:hover {
+            color: #e85d04;
+        }
+        .card p {
+            margin: 0 15px 15px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .card p strong {
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Your existing CSS styles */
+
+    </style>
+    <!-- Website Optimizations -->
+    <link rel="stylesheet" href="css/optimizations.css" media="all" />
+
+    <style>
+    .page-content {
+        padding: 40px 22px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .admin-page-container {
+        font-family: 'Montserrat', sans-serif;
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        border-top: 5px solid #174873;
+        margin-bottom: 40px;
+    }
+    .admin-page-container h2, .admin-page-container h3, .admin-page-container h1 {
+        color: #174873;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    .admin-page-container p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 20px;
+    }
+    .admin-page-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .admin-page-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+    .admin-page-container th, .admin-page-container td {
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        text-align: left;
+    }
+    .admin-page-container th {
+        background-color: #f4f6fb;
+        color: #174873;
+        font-weight: 700;
+    }
+    .admin-page-container tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+    .admin-page-container tr:hover {
+        background-color: #f1f1f1;
+    }
+    .admin-page-container ul, .admin-page-container ol {
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+    .admin-page-container li {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 10px;
+    }
+    </style>
+    
+</head>
+<body>
+<div class="main-container">
+<header class="custom-iiitp-header">
+			<div class="mobile-menu-toggle" onclick="document.body.classList.toggle('mobile-menu-active')" style="display:none;">
+				<i class="fas fa-bars"></i>
+			</div>
+<!-- Top Blue Bar -->
+<div class="top-blue-bar">
+<ul class="social-icons" style="align-items: center;">
+<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+<li style="margin-left: 10px;">
+<select id="language-selector" onchange="changeLanguage(this.value)" style="background: transparent; color: white; border: 1px solid white; padding: 2px 5px; border-radius: 4px; font-size: 12px; cursor: pointer; height: 24px;">
+<option style="color: black;" value="en">English</option>
+<option style="color: black;" value="hi">Hindi</option>
+</select>
+</li>
+</ul>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+					}
+					function changeLanguage(lang) {
+						if(lang === 'hi') {
+							document.cookie = "googtrans=/en/hi; path=/";
+							document.cookie = "googtrans=/en/hi; domain=." + document.domain + "; path=/";
+						} else {
+							document.cookie = "googtrans=/en/en; path=/";
+							document.cookie = "googtrans=/en/en; domain=." + document.domain + "; path=/";
+						}
+						window.location.reload();
+					}
+					// Set dropdown to current language
+					document.addEventListener("DOMContentLoaded", function() {
+						if(document.cookie.indexOf('googtrans=/en/hi') !== -1) {
+							document.getElementById('language-selector').value = 'hi';
+						}
+					});
+				</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</div>
+<!-- Logo and Text Section -->
+<div class="logo-text-section">
+<div class="row custom-row-flex">
+<div class="logo-text-wrapper" style="flex-direction: row; align-items: center; justify-content: flex-start; width: 100%;">
+						<div class="logo-container">
+							<a href="index.html"><img src="images/header_logo.png" alt="IIIT Pune Logo" class="main-logo" style="max-height: 100px; width: auto; object-fit: contain;" /></a>
+						</div>
+					</div>
+<div class="constitution-logo-container">
+<img alt="75 Years of Constitution" class="constitution-logo" src="images/constitution_75.png"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Navigation Section -->
+<div class="nav-section" style="position: sticky; top: 0; z-index: 9999; background-color: #f8f9fa; width: 100%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div class="row">
+<ul class="main-nav">
+<li><a href="index.html">Home</a></li>
+
+<li class="has-dropdown"><a href="#">Academics</a>
+						<ul class="dropdown-menu">
+							<li><a href="page_btech-cse-new.html">B.Tech CSE</a></li>
+							<li><a href="page_electronics-and-communication-engineering.html">B.Tech ECE</a></li>
+							<li><a href="page_btech-honors.html">B.Tech Honors</a></li>
+							<li><a href="page_mtechcse.html">M.Tech CSE</a></li>
+							<li><a href="page_mtech-ece.html">M.Tech ECE</a></li>
+							<li><a href="page_phd.html">Ph.D.</a></li>
+							<li><a href="page_visiting-faculty.html">Visiting Faculty</a></li>
+							<li><a href="page_admissionfee.html">Admission/Fee</a></li>
+						</ul>
+					</li>
+					<li class="has-dropdown"><a href="#">Research</a>
+						<ul class="dropdown-menu">
+							<li><a href="page_research-consultancy4.html">Research & Consultancy</a></li>
+							<li><a href="page_horizon.html">Horizon</a></li>
+						</ul>
+					</li>
+					<li class="has-dropdown"><a href="#">Student Life</a>
+						<ul class="dropdown-menu">
+							<li><a href="page_sports.html">Sports</a></li>
+							<li><a href="page_student.html">Student Clubs</a></li>
+							<li><a href="page_rofies.html">Rofies</a></li>
+							<li><a href="page_vanity-crew.html">Vanity Crew</a></li>
+							<li><a href="page_electic.html">Electic</a></li>
+							<li><a href="page_c-cube.html">C-Cube</a></li>
+							<li><a href="page_bit-legion.html">Bit Legion</a></li>
+							<li><a href="page_abhinay.html">Abhinay</a></li>
+							<li><a href="page_q-riocity.html">Q-Riocity</a></li>
+						</ul>
+					</li>
+<li class="has-dropdown"><a href="#">Administration </a>
+						<ul class="dropdown-menu">
+							<li><a href="admin_chairperson.html">Chairperson</a></li>
+							<li><a href="admin_director.html">Director</a></li>
+							<li><a href="admin_registrar.html">Registrar</a></li>
+							<li><a href="admin_board-of-governors.html">Board of Governors</a></li>
+							<li><a href="admin_finance-committee.html">Finance Committee</a></li>
+							<li><a href="admin_building-and-works-committee.html">Building and Works Committee</a></li>
+							<li><a href="admin_senate.html">Senate</a></li>
+							<li><a href="admin_board-of-studies-cse.html">Board of Studies (CSE)</a></li>
+							<li><a href="admin_board-of-studies-ece.html">Board of Studies (ECE)</a></li>
+							<li><a href="admin_board-of-studies-ash.html">Board of Studies (AS&H)</a></li>
+						</ul>
+					</li>
+					<li class="has-dropdown"><a href="#">People </a>
+<ul class="dropdown-menu">
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
+</ul>
+</li>
+<li><a href="#">Placements</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="#">Careers@IIITP</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#"><i class="fas fa-search"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="page-content">
+<div class="admin-page-container">
+<h1>Sports</h1>
+
+<div property="schema:text"><h2>Sports Club of IIIT Pune</h2>
+<p style="margin: 0cm 0cm 7.5pt; text-align: justify;">Sports are a great way to make friends, learn new skills and have fun. Apart from providing a social outlet for people sharing a common interest in a particular sport, they act as a platform to meet new people from different backgrounds and experiences. Sports and fitness go hand in hand and are essential for good mental and physical health. We at IIIT Pune Sports Club are here to build a community and create a sense of belonging to inspire people to reach their full potential and to help people improve their physical fitness and health.</p>
+<p><strong>Past Events:</strong></p>
+<p style="margin: 0cm 0cm 7.5pt; text-align: justify;">The sports club has conducted some successful events in the past. One of the highlights was the 5v5 Valorant Tournament on the institute premises. It was live streamed through a projector in the computer lab for everyone to watch. The tournament was a fabulous opportunity for students to showcase their talents and connect with other gamers on campus. It also helped in promoting esports at the college.<br/>
+An inter-batch Kabaddi tournament was held in April of 2023. Students from all the batches participated enthusiastically and displayed remarkable skills and sportsmanship. There were some nail-biting and enthralling matches in the tournament. The Batch ‘24 team triumphed, winning the trophy credit to their incredible teamwork and coordination.<br/>
+ <br/><strong>Inter IIIT Sports Meet 2023:</strong></p>
+<p style="margin: 0cm 0cm 7.5pt; text-align: justify;">The Inter IIIT Sports Meet, held at IIIT Kancheepuram from the 14th to the 17th of March 2023, stands as a remarkable event that successfully united athletes from various IIITs across the nation. Co-hosted by IIIT Kancheepuram and IIIT Kurnool, this event encompassed a diverse spectrum of sports, including athletics, basketball, badminton, chess, cricket, volleyball, football, and table tennis, among others. The dedication and zeal exhibited by the athletes were truly commendable, with the evident presence of fierce competition throughout the event. The atmosphere was characterized by a sense of mutual respect and encouragement, fostering an environment that prioritized participation and sportsmanship. Everyone gave their heart and soul in each of their respective games.<br/>
+The Volleyball team thrashed the competition and won the bronze medal and a trophy, and the Football team made everyone proud by securing the 4th position.</p>
+<p style="margin: 0cm 0cm 7.5pt; text-align: justify;">We are passionate about sports, and we want to share that passion with you. We are always looking for new ways to improve and are committed to providing the best possible experience for everyone.<br/>
+New ideas and suggestions are always welcomed here, and students can feel free to contact us in case of any issues or emergencies.</p>
+<figure role="group"><img alt="sports1" data-entity-type="file" data-entity-uuid="cbd62378-7c06-4ca7-8714-be866b1aaaba" src="https://www.iiitp.ac.in/sites/default/files/inline-images/image042.jpg"/><figcaption>Valorant Tournament</figcaption></figure><p> </p>
+<p>  </p>
+<figure role="group"><img alt="Inter-batch Kabaddi Tournament" data-entity-type="file" data-entity-uuid="3871ad4c-e43d-45ac-b273-0c7b9a73dd08" height="434" src="https://www.iiitp.ac.in/sites/default/files/inline-images/image043.jpg" width="650"/><figcaption>Inter-batch kabaddi tournament</figcaption></figure><figure role="group"><img alt="sports3" data-entity-type="file" data-entity-uuid="1a30a7e9-1e29-4e19-810a-1a241992e426" height="501" src="https://www.iiitp.ac.in/sites/default/files/inline-images/image045.jpg" width="668"/><figcaption>Contingent for Inter IIIT Sports Meet 2023</figcaption></figure><p><strong>The yearly report of the Sports Club for the academic year 2025–26-</strong></p>
+<p>Under the leadership of <strong>Shriraj Nilare (Head, Sports Club)</strong> and <strong>Bhavin Barad (Co-Head, Sports Club)</strong>, the club remained committed to promoting fitness, teamwork, discipline, leadership, and sportsmanship among students by organizing a wide range of sporting and recreational activities throughout the year. Along with a highly dedicated and capable team of club members, the club worked consistently towards building a stronger sports culture within the institute while ensuring active student participation and engagement across all events.</p>
+<p>Several planning sessions and coordination meetings were conducted by the club members before every major event to ensure smooth execution, proper management, and maximum student involvement. The events organized during the year not only encouraged competitive spirit but also helped students strengthen friendships, improve communication, and foster a strong sense of unity and belonging within the college community.</p>
+<p>The Sports Club successfully conducted the following major events during the academic year:</p>
+<ol start="1"><li>
+<p><strong>Esports Tournament (23rd November 2025)</strong><br/>
+	The Sports Club organized an exciting Esports Tournament that brought together gaming enthusiasts from across different batches and departments of the institute. The tournament featured highly popular games such as FIFA, Valorant, Clash Royale, Fall Guys, and several other multiplayer competitive titles that attracted enthusiastic participation from students.</p>
+<p>The event created a lively and energetic atmosphere on campus, with students gathering in large numbers not only to participate but also to cheer for their friends and teams. The intense matches, strategic gameplay, and competitive spirit made the tournament highly entertaining and memorable for everyone involved. Students displayed exceptional teamwork, quick decision-making abilities, communication skills, and coordination throughout the competition.</p>
+<p>Beyond competition, the tournament acted as a platform for students to interact, bond, and build stronger connections with one another. Participants and spectators alike thoroughly enjoyed the event, making it one of the most engaging student activities of the semester. The Esports Tournament successfully highlighted the growing interest in digital gaming while promoting healthy competition, collaboration, and student unity.</p>
+</li>
+<li>
+<p><strong>Eklavya – Annual Sports Fest (27th–29th March 2026)</strong><br/>
+	Eklavya, the annual three-day sports fest organized by the Sports Club, was one of the biggest and most successful events conducted during the academic year. The event witnessed enthusiastic participation from students across all years and departments and transformed the campus into a vibrant and energetic sporting environment.</p>
+<p>The fest included a wide variety of indoor and outdoor sports competitions such as football, cricket, volleyball, basketball, badminton, kabaddi, chess, carroms, and table tennis. Students participated with immense enthusiasm and dedication, displaying remarkable athletic ability, teamwork, determination, and sportsmanship throughout the competitions.</p>
+<p>Across the three days, the campus was filled with excitement, cheering crowds, and moments of intense competition. Students gathered in large numbers to support their friends and teams, creating an atmosphere filled with energy, motivation, and unity. Every match and competition brought students together, strengthening friendships and encouraging interaction among participants from different batches and backgrounds.</p>
+<p>Eklavya provided students with a much-needed opportunity to relax, enjoy, and engage in healthy recreational activities alongside academics. The event successfully promoted physical fitness, team coordination, leadership qualities, and mutual respect among students while also creating several memorable experiences for participants and spectators alike.</p>
+<p>The event played a significant role in enhancing the overall campus spirit and fostering a strong sense of togetherness within the institute community.</p>
+</li>
+<li>
+<p><strong>Participation in Inter IIIT Sports Competition at IIITDM Kurnool</strong><br/>
+	Students from the institute actively participated in the Inter IIIT Sports Competition hosted at IIITDM Kurnool, proudly representing the college across multiple sporting events. The competition provided students with valuable exposure to high-level inter-college sports and allowed them to compete with talented participants from various IIITs across the country.</p>
+<p>The participating students demonstrated dedication, discipline, determination, and excellent team spirit while representing the institute. The experience not only helped students improve their sporting skills but also gave them an opportunity to interact with athletes from different institutions, exchange experiences, and build new connections.</p>
+<p>Participation in such large-scale competitions greatly motivated students and encouraged greater involvement in sports activities within the institute. The Sports Club played an important role in supporting and encouraging the participating teams, contributing significantly towards strengthening the sports culture of the college.</p>
+</li>
+</ol><p>The successful execution of all these activities and events was made possible through continuous efforts, teamwork, planning, and coordination by the Sports Club members.</p>
+<p>The academic year 2025–26 proved to be highly productive and memorable for the Sports Club. Through its various initiatives and events, the club successfully encouraged fitness, teamwork, leadership, discipline, and sportsmanship while also strengthening unity and student interaction across the institute.</p>
+<p><img alt="1" class="align-left" data-entity-type="file" data-entity-uuid="4bcfd7bf-17e3-4bcc-83a1-5fa1442a44a1" height="418" src="https://www.iiitp.ac.in/sites/default/files/inline-images/Frame%20780.png" width="836"/></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><img alt="2" data-entity-type="file" data-entity-uuid="4a27d896-5a23-4e3f-b08d-7c4b05773b05" src="https://www.iiitp.ac.in/sites/default/files/inline-images/_THC3794.JPG"/></p>
+<p><img alt="3" data-entity-type="file" data-entity-uuid="74d91421-b1d8-44d5-a379-2c0369890c89" src="https://www.iiitp.ac.in/sites/default/files/inline-images/_DSC3302.JPG"/></p>
+<p><img alt="4" class="align-left" data-entity-type="file" data-entity-uuid="d8c2a397-5619-46c7-b7a0-6a4141cee778" height="691" src="https://www.iiitp.ac.in/sites/default/files/inline-images/DSC03854.JPG" width="1037"/></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><img alt="5" class="align-left" data-entity-type="file" data-entity-uuid="6264f007-39c9-4667-a8db-12f2b1e24728" src="https://www.iiitp.ac.in/sites/default/files/inline-images/_THC4888.JPG"/></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>Reach out to us –</p>
+<p><br/><strong>Email</strong>: sports@iiitp.ac.in<br/><a href="https://instagram.com/sports_club_iiitp?igshid=MzRlODBiNWFlZA==">Instagram</a></p>
+</div>
+
+</div>
+</div>
+<!-- Footer -->
+<div class="footer">
+<div class="footerbottom">
+<div class="row">
+<div class="medium-6 small-12 columns left-side">
+<div class="copyrightinfo">© 2026 <a href="#">Indian Institute of Information Technology, Pune</a>.
+						All Rights Reserved.</div>
+</div><!-- left side /-->
+<div class="medium-6 small-12 columns right-side">
+<div class="menu-footer-menu-container">
+<ul class="menu" id="menu-footer-menu">
+<li><a href="#">Terms of Use</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div><!-- Right Side /-->
+</div><!-- Row /-->
+</div><!-- footer Bottom /-->
+</div>
+<!-- Footer Ends here /-->
+</div>
+<a class="animated fadeInUp start-anim" href="#top" id="top"><i class="fas fa-angle-double-up"></i></a>
+<script>
+
+
+
+        const staffList = document.querySelectorAll('.card');
+        const departmentFilter = document.getElementById('department-filter');
+        const modeFilter = document.getElementById('mode-filter');
+        const inchargeFilter = document.getElementById('incharge-filter');
+        let selectedLetter = 'ALL';
+
+        function filterstaff() {
+            const selectedDepartment = departmentFilter.value || 'ALL';
+            const selectedMode = modeFilter.value || 'ALL';
+            const selectedIncharge = inchargeFilter.value || 'ALL';
+
+            const container = document.querySelector('.card-container');
+            const visibleCards = [];
+
+            staffList.forEach(card => {
+                const name = card.dataset.name.toUpperCase();
+                const department = card.dataset.department;
+                const mode = card.dataset.mode;
+                const incharge = card.dataset.incharge;
+
+                let isVisible = true;
+
+                // Filter by letter
+                if (selectedLetter !== 'ALL' && !name.startsWith(selectedLetter)) {
+                    isVisible = false;
+                }
+
+                // Filter by department
+                if (selectedDepartment !== 'ALL' && department !== selectedDepartment) {
+                    isVisible = false;
+                }
+
+                // Filter by mode
+                if (selectedMode !== 'ALL' && mode !== selectedMode) {
+                    isVisible = false;
+                }
+
+                // Filter by incharge
+                if (selectedIncharge !== 'ALL' && incharge !== selectedIncharge) {
+                    isVisible = false;
+                }
+
+                card.style.display = isVisible ? 'block' : 'none';
+                if (isVisible) visibleCards.push(card);
+            });
+
+            // Sort visible cards only if a department is selected
+            if (selectedDepartment !== 'ALL') {
+                visibleCards.sort((a, b) => {
+                    const isAHoD = a.dataset.incharge === 'HOD' ? 1 : 0;
+                    const isBHoD = b.dataset.incharge === 'HOD' ? 1 : 0;
+
+                    // HoD comes first if applicable
+                    if (isBHoD !== isAHoD) {
+                        return isBHoD - isAHoD;
+                    }
+                    return 0;
+                });
+            }
+
+            // Clear and re-render sorted cards
+            container.innerHTML = '';
+            visibleCards.forEach(card => container.appendChild(card));
+        }
+
+        function filterByLetter(letter) {
+            selectedLetter = letter;
+            document.querySelectorAll('.filter-section a').forEach(a => a.classList.remove('active'));
+            document.getElementById(letter).classList.add('active');
+            filterstaff();
+        }
+
+        // Attach event listeners to filters
+        departmentFilter.addEventListener('change', filterstaff);
+        modeFilter.addEventListener('change', filterstaff);
+        inchargeFilter.addEventListener('change', filterstaff);
+    
+
+
+</script>
+<script src="js/search.js"></script>
+    <!-- Website Optimizations Script -->
+    <script src="js/optimizations.js"></script>
+</body>
+</html>
