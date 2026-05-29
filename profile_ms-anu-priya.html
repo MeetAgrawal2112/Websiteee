@@ -76,9 +76,9 @@
 <style>
 
         .main-nav li { position: relative; }
-        .main-nav .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; }
-        .main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
-        .main-nav .has-dropdown:hover .dropdown-menu { display: block; }
+					.main-nav .dropdown-menu { display: block; visibility: hidden; opacity: 0; position: absolute; top: 120%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); pointer-events: none; transform: translateY(10px); }
+					.main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+					.main-nav .has-dropdown:hover .dropdown-menu { visibility: visible; opacity: 1; top: 100%; pointer-events: auto; transform: translateY(0); }
         .main-nav .dropdown-menu li a { display: block; padding: 0.75rem 1rem; color: #111111; text-decoration: none; font-size: 0.95rem; border-bottom: none; }
         .main-nav .dropdown-menu li a:hover { background: #f8f9fa; color: #e85d04; }
 
@@ -398,6 +398,9 @@
 <body>
 <div class="main-container">
 <header class="custom-iiitp-header">
+			<div class="mobile-menu-toggle" onclick="document.body.classList.toggle('mobile-menu-active')" style="display:none;">
+				<i class="fas fa-bars"></i>
+			</div>
 <!-- Top Blue Bar -->
 <div class="top-blue-bar">
 <ul class="social-icons" style="align-items: center;">
@@ -440,17 +443,11 @@
 <!-- Logo and Text Section -->
 <div class="logo-text-section">
 <div class="row custom-row-flex">
-<div class="logo-text-wrapper">
-<div class="logo-container">
-<a href="index.html"><img alt="IIIT Pune Logo" class="main-logo" src="images/logo%20copy.png"/></a>
-</div>
-<div class="text-container">
-<h2 class="hindi-title">भारतीय सूचना प्रौद्योगिकी संस्थान, पुणे</h2>
-<h3 class="english-title">Indian Institute of Information Technology, Pune</h3>
-<p class="subtitle">(An Institute of National Importance by an Act of Parliament)</p>
-<p class="address-text">Gat No - 5 &amp; 6, Vill - Nanoli-Tarf Chakan, PO – Talegaon, Tah – Maval, Dist - Pune, Maharashtra – 410507</p>
-</div>
-</div>
+<div class="logo-text-wrapper" style="flex-direction: row; align-items: center; justify-content: flex-start; width: 100%;">
+						<div class="logo-container">
+							<a href="index.html"><img src="images/header_logo.png" alt="IIIT Pune Logo" class="main-logo" style="max-height: 100px; width: auto; object-fit: contain;" /></a>
+						</div>
+					</div>
 <div class="constitution-logo-container">
 <img alt="75 Years of Constitution" class="constitution-logo" src="images/constitution_75.png"/>
 </div>
@@ -462,11 +459,25 @@
 <div class="row">
 <ul class="main-nav">
 <li><a href="index.html">Home</a></li>
-<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Admissions</a></li>
+
 <li><a href="#">Academics</a></li>
 <li><a href="#">Research</a></li>
 <li><a href="#">Student Life</a></li>
-<li class="has-dropdown"><a href="#">People <i class="fas fa-chevron-down" style="font-size:0.75rem;margin-left:6px;"></i></a>
+<li class="has-dropdown"><a href="#">Administration </a>
+						<ul class="dropdown-menu">
+							<li><a href="admin_chairperson.html">Chairperson</a></li>
+							<li><a href="admin_director.html">Director</a></li>
+							<li><a href="admin_registrar.html">Registrar</a></li>
+							<li><a href="admin_board-of-governors.html">Board of Governors</a></li>
+							<li><a href="admin_finance-committee.html">Finance Committee</a></li>
+							<li><a href="admin_building-and-works-committee.html">Building and Works Committee</a></li>
+							<li><a href="admin_senate.html">Senate</a></li>
+							<li><a href="admin_board-of-studies-cse.html">Board of Studies (CSE)</a></li>
+							<li><a href="admin_board-of-studies-ece.html">Board of Studies (ECE)</a></li>
+							<li><a href="admin_board-of-studies-ash.html">Board of Studies (AS&H)</a></li>
+						</ul>
+					</li>
+					<li class="has-dropdown"><a href="#">People </a>
 <ul class="dropdown-menu">
 <li><a class="active" href="faculty.html">Faculty</a></li>
 <li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
@@ -474,7 +485,7 @@
 </li>
 <li><a href="#">Placements</a></li>
 <li><a href="#">Events</a></li>
-<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Careers@IIITP</a></li>
+<li><a href="#">Careers@IIITP</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="#"><i class="fas fa-search"></i></a></li>
 </ul>
@@ -489,14 +500,12 @@
             <div class="profile-info-container">
                 <h1>Ms. Anu Priya</h1>
                 <ul class="profile-details-list">
-                    <li>
-
-<p>Ms. Anu Priya, currently working as an Adjunct Assistant Professor in the Computer Science and Engineering Department at the Indian Institute of Information Technology Pune, India. She is pursuing PhD from IIIT Pune under the guidance of Prof. Dr. Ritu Tiwari and has collaboration with Dr. Pooja Agrawal, School of Robotics, Defence Institute of Advance Technology Pune, India. She has completed M.E. in Mobile and Pervasive Computing and MCA in Computer Applications from Anna University, Chennai and secured 1st Rank (Gold Medal) in both M.E. and MCA university examinations.She has also served as a member of Technical Education Quality Improvement Programmed a project of Government of India assisted by World Bank. She has awarded with Grade-C (3rd Rank) and cash prize in Task Based Teacher Training using Firebird-V Robot in e-Yantra Robotics Training by IIT Bombay. She is contributing in academics since 2017. Her research Interests include Image Processing, Computer Vision, Deep Learning, Deep Reinforcement Learning, Robot Path Planning.</p>
-<p><span class="field-content"><span><span><span><span> </span></span></span></span></span></p>
-</li>
-<li><span class="field-content"><a href="" target="_blank">https://scholar.google.com/citations?user=86mYpqgAAAAJ</a></span></li>
-<li><span class="field-content"><a href="" target="_blank">https://orcid.org/0000-0003-3357-1398</a></span></li>
-<li><span class="field-content"><a class="btn btn-info" href="https://iiitp.ac.in/sites/default/files/2024-01/Resume_Anu%20Priya.pdf" target="_blank">View Resume</a></span></li>
+                    <li><strong>Designation:</strong> Adjunct Assistant Professor</li>
+<li><strong>Educational Qualification:</strong> Ph.D. (CSE) IIIT Pune</li>
+<li>M.E. Anna University, Chennai</li>
+<li>M.C.A.  Anna University, Chennai</li>
+<li><strong>Email:</strong> apriya@iiitp.ac.in</li>
+<li><strong>Phone:</strong> +91</li>
 
                 </ul>
             </div>
@@ -506,92 +515,16 @@
         
             <h2><i class="fas fa-user-tie"></i> Biography & Research</h2>
             <div class="biography-text">
-                <div property="schema:text"><div id="wrapper"><!-- start: Container -->
-<div class="container" id="skip-content"><!--Content top--><!--End Content top--><!--start:content --><!--   <div class="row">
-                <div class="col-md-12">  <div class="region region-breadcrumb">
-    <div id="block-creative-responsive-theme-breadcrumbs" class="block block-system block-system-breadcrumb-block">
-  
-    
-        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
-    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
-    <ul>
-          <li>
-                  <a href="/">Home</a>
-              </li>
-          <li>
-                  <a href="/page/dr-tanmoy-hazra">Ms. Anu Priya </a>
-              </li>
-        </ul>
-  </nav>
-
-  </div>
-
-  </div>
-</div>
-              </div> -->
-<div class="row layout"><!--- Start Left SideBar --><!---End Right SideBar --><!--- Start content -->
-<div class="content_layout">
-<div class="col-md-12">
-<div class="region region-content">
-<article about="/page/dr-tanmoy-hazra" class="node node--type-page node--view-mode-full" data-history-node-id="613" role="article" typeof="schema:WebPage"><div class="node__content">
-<div property="schema:text">
-<div id="Div1"><!-- start: Container -->
-<div class="container" id="Div2"><!--Content top--><!--End Content top--><!--start:content --><!--   <div class="row">
-                <div class="col-md-12">  <div class="region region-breadcrumb">
-    <div id="block-creative-responsive-theme-breadcrumbs" class="block block-system block-system-breadcrumb-block">
-  
-    
-        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
-    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
-    <ul>
-          <li>
-                  <a href="/">Home</a>
-              </li>
-          <li>
-                  <a href="/faculty">Faculty</a>
-              </li>
-          <li>
-                  <a href="/faculty/csefaculty">Csefaculty</a>
-              </li>
-        </ul>
-  </nav>
-
-  </div>
-
-  </div>
-</div>
-              </div> -->
-<div class="row layout"><!--- Start Left SideBar --><!---End Right SideBar --><!--- Start content -->
-<div class="content_layout">
-<div class="col-md-12">
-<div class="region region-content">
-<div class="views-element-container">
-<div class="faculty-inner js-view-dom-id-cce6443c2bc9d2b620105fa763d025a62eb14c26e3818f289b9a4eb40735681e">
-<header> </header><div class="views-row">
-<div class="views-field views-field-nothing-1">
-<div class="faculty-profile">
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!---End content --><!--- Start Right SideBar --><!---End Right SideBar --></div>
-<!--End Content --></div>
-<!--Start Content Bottom--><!--End Content Bottom--></div>
-</div>
-</div>
-</div>
-</article></div>
-</div>
-</div>
-<!---End content --><!--- Start Right SideBar --><!---End Right SideBar --></div>
-</div>
-</div>
-</div>
+                <p><strong>Ms. Anu Priya</strong> is currently working as an Adjunct Assistant Professor in the Computer Science and Engineering Department at the Indian Institute of Information Technology Pune, India. She is pursuing PhD from IIIT Pune under the guidance of Prof. Dr. Ritu Tiwari and has collaboration with Dr. Pooja Agrawal, School of Robotics, Defence Institute of Advance Technology Pune, India.</p>
+                <p>She has completed M.E. in Mobile and Pervasive Computing and MCA in Computer Applications from Anna University, Chennai and secured 1st Rank (Gold Medal) in both M.E. and MCA university examinations. She has also served as a member of Technical Education Quality Improvement Programme, a project of Government of India assisted by World Bank. She was awarded with Grade-C (3rd Rank) and cash prize in Task Based Teacher Training using Firebird-V Robot in e-Yantra Robotics Training by IIT Bombay. She has been contributing in academics since 2017. Her research interests include Image Processing, Computer Vision, Deep Learning, Deep Reinforcement Learning, Robot Path Planning.</p>
             </div>
+            
+            <h2><i class="fas fa-link"></i> Academic Profiles & Links</h2>
+            <ul class="profile-links-list">
+                <li><i class="fab fa-google"></i> <span class="link-label">Google Scholar:</span> <a href="https://scholar.google.com/citations?user=86mYpqgAAAAJ" target="_blank">https://scholar.google.com/citations?user=86mYpqgAAAAJ</a></li>
+                <li><i class="fab fa-orcid"></i> <span class="link-label">ORCID:</span> <a href="https://orcid.org/0000-0003-3357-1398" target="_blank">https://orcid.org/0000-0003-3357-1398</a></li>
+                <li><i class="fas fa-file-pdf"></i> <span class="link-label">Resume:</span> <a href="https://iiitp.ac.in/sites/default/files/2024-01/Resume_Anu%20Priya.pdf" target="_blank">https://iiitp.ac.in/sites/default/files/2024-01/Resume_Anu%20Priya.pdf</a></li>
+            </ul>
             
         </div>
         </div>

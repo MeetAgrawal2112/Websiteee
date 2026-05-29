@@ -233,3 +233,75 @@
         }
     }
 })();
+
+/* Mobile menu enhancements: toggle active state and close on outside click / Escape */
+(function() {
+    try {
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        if (!toggle) return;
+
+        function setActive(isActive) {
+            if (isActive) toggle.classList.add('active');
+            else toggle.classList.remove('active');
+        }
+
+        toggle.addEventListener('click', function(e) {
+            // Toggle is already handled inline in HTML; simply sync active state
+            console.debug('mobile toggle clicked');
+            const isNow = document.body.classList.contains('mobile-menu-active');
+            setActive(isNow);
+        });
+
+        // Close mobile menu when clicking outside nav or top bar
+        document.addEventListener('click', function(e) {
+            if (!document.body.classList.contains('mobile-menu-active')) return;
+            const nav = document.querySelector('.nav-section');
+            const top = document.querySelector('.top-blue-bar');
+            if (toggle.contains(e.target)) return;
+            if (nav && nav.contains(e.target)) return;
+            if (top && top.contains(e.target)) return;
+            document.body.classList.remove('mobile-menu-active');
+            setActive(false);
+        }, { capture: true });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.body.classList.contains('mobile-menu-active')) {
+                document.body.classList.remove('mobile-menu-active');
+                setActive(false);
+            }
+        });
+    } catch (err) {
+        console.warn('Mobile menu enhancement failed', err);
+    }
+})();
+
+// Ensure preloader does not block interactions: hide if still present
+(function() {
+    try {
+        function removePreloader() {
+            const loader = document.getElementById('loading');
+            if (!loader) return;
+            try {
+                if (!loader.classList.contains('loaded')) loader.classList.add('loaded');
+                loader.style.display = 'none';
+                loader.style.pointerEvents = 'none';
+                if (loader.parentNode) loader.parentNode.removeChild(loader);
+                console.debug('preloader removed');
+            } catch (e) {
+                console.warn('preloader removal error', e);
+            }
+        }
+
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            removePreloader();
+        } else {
+            document.addEventListener('DOMContentLoaded', removePreloader);
+        }
+
+        // Fallback: if some scripts block DOMContentLoaded, forcibly remove after 2s
+        setTimeout(removePreloader, 2000);
+    } catch (e) {
+        console.warn('Preloader removal failed', e);
+    }
+})();

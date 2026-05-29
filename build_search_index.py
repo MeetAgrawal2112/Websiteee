@@ -3,11 +3,10 @@ import json
 import re
 
 def build_index():
-    html_files = ['index.html', 'faculty.html', 'non-teaching-staff.html', 'contact.html']
+    html_files = [f for f in os.listdir('.') if f.endswith('.html')]
     index = []
     
     for file in html_files:
-        if not os.path.exists(file): continue
         with open(file, 'r', encoding='utf-8') as f:
             content = f.read()
             

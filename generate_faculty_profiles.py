@@ -274,17 +274,42 @@ def main():
                 # Remove headings as we already have the local name
                 for heading in faculty_main.find_all(['h1', 'h2', 'h3']):
                     heading.decompose()
+                title = faculty_main.find(class_='faculty-left-title')
+                if title: title.decompose()
                     
-                # Look for the last div which usually holds the list of details
-                info_divs = faculty_main.find_all('div', recursive=False)
-                if info_divs:
-                    info_div = info_divs[-1]
-                    for div in info_div.find_all('div', recursive=False):
-                        for tag in div.find_all(True):
-                            tag.attrs = {key: value for key, value in tag.attrs.items() if key != 'style'}
-                        text = div.get_text(strip=True)
+                faculty_right = faculty_main.find('div', class_='faculty-right')
+                if faculty_right:
+                    container_for_details = faculty_right
+                else:
+                    info_divs = faculty_main.find_all('div', recursive=False)
+                    container_for_details = info_divs[-1] if info_divs else faculty_main
+                    
+                raw_texts = []
+                for elem in container_for_details.children:
+                    if elem.name in ['p', 'div'] and elem.get('class') != ['faculty-left-title']:
+                        for br in elem.find_all('br'):
+                            br.replace_with('\n')
+                        text = elem.get_text().strip()
                         if text:
-                            details_html += f"<li>{div.decode_contents()}</li>\n"
+                            raw_texts.extend([t.strip() for t in text.split('\n') if t.strip()])
+                
+                for text in raw_texts:
+                    if not text: continue
+                    text = text.replace('\xa0', ' ')
+                    if ':' in text:
+                        parts = text.split(':', 1)
+                        details_html += f"<li><strong>{parts[0].strip()}:</strong> {parts[1].strip()}</li>\n"
+                    else:
+                        if text.lower().startswith("designation"):
+                            details_html += f"<li><strong>Designation:</strong> {text[11:].strip()}</li>\n"
+                        elif text.lower().startswith("email"):
+                            details_html += f"<li><strong>Email:</strong> {text[5:].strip()}</li>\n"
+                        elif text.lower().startswith("phone"):
+                            details_html += f"<li><strong>Phone:</strong> {text[5:].strip()}</li>\n"
+                        else:
+                            # It might be a continuation of education or a bullet point
+                            details_html += f"<li>{text}</li>\n"
+                            
                 # Remove faculty_main from DOM so we can extract biography from the rest
                 faculty_main.decompose()
 
@@ -321,8 +346,11 @@ def main():
                 else:
                     p.attrs = {key: value for key, value in p.attrs.items() if key != 'style'}
                     
-            # Check for generic wrappers like 'faculty-bio' that might contain the actual content
-            biography_html = content_root.decode_contents().strip()
+            faculty_bio = content_root.find('div', class_='faculty-bio')
+            if faculty_bio:
+                biography_html = faculty_bio.decode_contents().strip()
+            else:
+                biography_html = content_root.decode_contents().strip()
 
         except Exception as e:
             print(f"Extraction error on {profile_url}: {e}")

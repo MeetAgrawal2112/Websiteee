@@ -76,9 +76,9 @@
 <style>
 
         .main-nav li { position: relative; }
-        .main-nav .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; }
-        .main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
-        .main-nav .has-dropdown:hover .dropdown-menu { display: block; }
+					.main-nav .dropdown-menu { display: block; visibility: hidden; opacity: 0; position: absolute; top: 120%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); pointer-events: none; transform: translateY(10px); }
+					.main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+					.main-nav .has-dropdown:hover .dropdown-menu { visibility: visible; opacity: 1; top: 100%; pointer-events: auto; transform: translateY(0); }
         .main-nav .dropdown-menu li a { display: block; padding: 0.75rem 1rem; color: #111111; text-decoration: none; font-size: 0.95rem; border-bottom: none; }
         .main-nav .dropdown-menu li a:hover { background: #f8f9fa; color: #e85d04; }
 
@@ -398,6 +398,9 @@
 <body>
 <div class="main-container">
 <header class="custom-iiitp-header">
+			<div class="mobile-menu-toggle" onclick="document.body.classList.toggle('mobile-menu-active')" style="display:none;">
+				<i class="fas fa-bars"></i>
+			</div>
 <!-- Top Blue Bar -->
 <div class="top-blue-bar">
 <ul class="social-icons" style="align-items: center;">
@@ -440,17 +443,11 @@
 <!-- Logo and Text Section -->
 <div class="logo-text-section">
 <div class="row custom-row-flex">
-<div class="logo-text-wrapper">
-<div class="logo-container">
-<a href="index.html"><img alt="IIIT Pune Logo" class="main-logo" src="images/logo%20copy.png"/></a>
-</div>
-<div class="text-container">
-<h2 class="hindi-title">भारतीय सूचना प्रौद्योगिकी संस्थान, पुणे</h2>
-<h3 class="english-title">Indian Institute of Information Technology, Pune</h3>
-<p class="subtitle">(An Institute of National Importance by an Act of Parliament)</p>
-<p class="address-text">Gat No - 5 &amp; 6, Vill - Nanoli-Tarf Chakan, PO – Talegaon, Tah – Maval, Dist - Pune, Maharashtra – 410507</p>
-</div>
-</div>
+<div class="logo-text-wrapper" style="flex-direction: row; align-items: center; justify-content: flex-start; width: 100%;">
+						<div class="logo-container">
+							<a href="index.html"><img src="images/header_logo.png" alt="IIIT Pune Logo" class="main-logo" style="max-height: 100px; width: auto; object-fit: contain;" /></a>
+						</div>
+					</div>
 <div class="constitution-logo-container">
 <img alt="75 Years of Constitution" class="constitution-logo" src="images/constitution_75.png"/>
 </div>
@@ -462,11 +459,25 @@
 <div class="row">
 <ul class="main-nav">
 <li><a href="index.html">Home</a></li>
-<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Admissions</a></li>
+
 <li><a href="#">Academics</a></li>
 <li><a href="#">Research</a></li>
 <li><a href="#">Student Life</a></li>
-<li class="has-dropdown"><a href="#">People <i class="fas fa-chevron-down" style="font-size:0.75rem;margin-left:6px;"></i></a>
+<li class="has-dropdown"><a href="#">Administration </a>
+						<ul class="dropdown-menu">
+							<li><a href="admin_chairperson.html">Chairperson</a></li>
+							<li><a href="admin_director.html">Director</a></li>
+							<li><a href="admin_registrar.html">Registrar</a></li>
+							<li><a href="admin_board-of-governors.html">Board of Governors</a></li>
+							<li><a href="admin_finance-committee.html">Finance Committee</a></li>
+							<li><a href="admin_building-and-works-committee.html">Building and Works Committee</a></li>
+							<li><a href="admin_senate.html">Senate</a></li>
+							<li><a href="admin_board-of-studies-cse.html">Board of Studies (CSE)</a></li>
+							<li><a href="admin_board-of-studies-ece.html">Board of Studies (ECE)</a></li>
+							<li><a href="admin_board-of-studies-ash.html">Board of Studies (AS&H)</a></li>
+						</ul>
+					</li>
+					<li class="has-dropdown"><a href="#">People </a>
 <ul class="dropdown-menu">
 <li><a class="active" href="faculty.html">Faculty</a></li>
 <li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
@@ -474,7 +485,7 @@
 </li>
 <li><a href="#">Placements</a></li>
 <li><a href="#">Events</a></li>
-<li><a href="#"><i class="fas fa-certificate" style="color:#d9534f; font-size: 12px; margin-right: 4px;"></i>Careers@IIITP</a></li>
+<li><a href="#">Careers@IIITP</a></li>
 <li><a href="contact.html">Contact Us</a></li>
 <li><a href="#"><i class="fas fa-search"></i></a></li>
 </ul>
@@ -489,11 +500,12 @@
             <div class="profile-info-container">
                 <h1>Ms. Sabah Tazeen</h1>
                 <ul class="profile-details-list">
-                    <li><strong>Designation: </strong>Adjunct Assistant Professor</li>
-<li><strong>Educational Qualification Ph.D.: </strong>NIT Patna<br/><strong>M.Tech.(CSE): </strong>IIIT Bhubaneswar</li>
-<li><strong>B.E.(CSE): </strong>Bharati Vidyapeeth's College of Engineering for Women</li>
-<li><strong>Email: </strong><a href="mailto:sabah@iiitp.ac.in">sabah@iiitp.ac.in</a></li>
-<li><strong>Phone</strong><a href="tel:+916299637482" target="_blank">+91 6299637482</a> </li>
+                    <li><strong>Designation:</strong> Adjunct Assistant Professor</li>
+<li><strong>Educational Qualification Ph.D.:</strong> NIT Patna</li>
+<li><strong>M.Tech.(CSE):</strong> IIIT Bhubaneswar</li>
+<li><strong>B.E.(CSE):</strong> Bharati Vidyapeeth's College of Engineering for Women</li>
+<li><strong>Email:</strong> sabah@iiitp.ac.in</li>
+<li><strong>Phone:</strong> +91 6299637482</li>
 
                 </ul>
             </div>
