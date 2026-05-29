@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Optimizations - Demo</title>
+    <link rel="stylesheet" href="css/optimizations.css">
+    <style>
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            animation: slideInDown 0.5s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeInUp 0.7s ease;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            animation: slideInLeft 0.5s ease;
+        }
+
+        .demo-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .demo-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        /* Button Demos */
+        .btn-demo {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            will-change: transform;
+        }
+
+        .btn-demo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+            background: #764ba2;
+        }
+
+        .btn-demo.alt {
+            background: #f093fb;
+        }
+
+        .btn-demo.alt:hover {
+            background: #e85d04;
+        }
+
+        /* Card Demos */
+        .card-demo {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            will-change: transform, box-shadow;
+            cursor: pointer;
+        }
+
+        .card-demo:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .card-demo h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        /* Animation Classes Demo */
+        .animation-demo {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            border-radius: 4px;
+            margin: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .animation-demo.fade-in {
+            animation: fadeIn 1s ease;
+        }
+
+        .animation-demo.fade-in-up {
+            animation: fadeInUp 1s ease;
+        }
+
+        .animation-demo.slide-in-left {
+            animation: slideInLeft 1s ease;
+        }
+
+        .animation-demo.slide-in-right {
+            animation: slideInRight 1s ease;
+        }
+
+        .animation-demo.slide-in-down {
+            animation: slideInDown 1s ease;
+        }
+
+        .animation-demo.pulse {
+            animation: pulse 1s ease infinite;
+        }
+
+        .animation-demo.bounce {
+            animation: bounce 1s ease infinite;
+        }
+
+        /* Form Demos */
+        .form-group {
+            margin: 20px 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            will-change: border-color, box-shadow;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Scroll Animation */
+        .scroll-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 2em;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+            border-radius: 4px;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            will-change: transform;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .reset-btn {
+            background: #764ba2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .reset-btn:hover {
+            background: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎨 Website Optimizations Demo</h1>
+        <p>Experience smooth transitions, animations, and performance enhancements</p>
+    </header>
+
+    <!-- Button Demos Section -->
+    <div class="demo-section">
+        <h2>✨ Button Animations & Transitions</h2>
+        <p>Hover over buttons to see smooth transitions and elevation effects</p>
+        <div class="demo-row">
+            <button class="btn-demo">Primary Button</button>
+            <button class="btn-demo alt">Secondary Button</button>
+            <button class="btn-demo">Action Button</button>
+            <button class="btn-demo alt">Click Me</button>
+        </div>
+    </div>
+
+    <!-- Card Demos Section -->
+    <div class="demo-section">
+        <h2>🎯 Card Hover Effects</h2>
+        <p>Hover over cards to see elevation and shadow effects</p>
+        <div class="demo-row">
+            <div class="card-demo">
+                <h3>Card One</h3>
+                <p>Smooth elevation effect on hover with enhanced shadow</p>
+            </div>
+            <div class="card-demo">
+                <h3>Card Two</h3>
+                <p>Hardware accelerated animations for smooth 60fps performance</p>
+            </div>
+            <div class="card-demo">
+                <h3>Card Three</h3>
+                <p>Professional visual feedback for better user experience</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animation Classes Demo -->
+    <div class="demo-section">
+        <h2>🔄 CSS Animation Classes</h2>
+        <p>Click the button below to see different animation classes in action</p>
+        <button class="reset-btn" onclick="resetAnimations()">Reset Animations</button>
+
+        <div style="margin-top: 20px;">
+            <p><strong>Fade In:</strong>
+                <div class="animation-demo fade-in"></div>
+            </p>
+            <p><strong>Fade In & Move Up:</strong>
+                <div class="animation-demo fade-in-up"></div>
+            </p>
+            <p><strong>Slide In Left:</strong>
+                <div class="animation-demo slide-in-left"></div>
+            </p>
+            <p><strong>Slide In Right:</strong>
+                <div class="animation-demo slide-in-right"></div>
+            </p>
+            <p><strong>Slide In Down:</strong>
+                <div class="animation-demo slide-in-down"></div>
+            </p>
+            <p><strong>Pulse:</strong>
+                <div class="animation-demo pulse"></div>
+            </p>
+            <p><strong>Bounce:</strong>
+                <div class="animation-demo bounce"></div>
+            </p>
+        </div>
+    </div>
+
+    <!-- Form Interaction Demo -->
+    <div class="demo-section">
+        <h2>📝 Form Interactions</h2>
+        <p>Click on form fields to see focus animations and transitions</p>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Enter your message" rows="4"></textarea>
+        </div>
+        <button class="btn-demo">Submit Form</button>
+    </div>
+
+    <!-- Features Section -->
+    <div class="demo-section">
+        <h2>✅ What's Included</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🚀 Performance</h3>
+                <p>Hardware acceleration and GPU optimization for smooth 60fps animations</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎨 Smooth Transitions</h3>
+                <p>All interactive elements use smooth cubic-bezier transitions</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 Mobile Optimized</h3>
+                <p>Responsive animations that work perfectly on all devices</p>
+            </div>
+            <div class="feature-card">
+                <h3>♿ Accessibility</h3>
+                <p>Respects prefers-reduced-motion for better accessibility</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔄 Lazy Loading</h3>
+                <p>Automatic lazy loading for images to improve performance</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Better UX</h3>
+                <p>Enhanced visual feedback makes interactions feel more responsive</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code Examples -->
+    <div class="demo-section">
+        <h2>💻 Usage Examples</h2>
+
+        <h3>1. Using Animation Classes</h3>
+        <div class="code-block"><code>&lt;div class="fade-in"&gt;Content&lt;/div&gt;
+&lt;div class="slide-in-left"&gt;Slides in from left&lt;/div&gt;
+&lt;div class="scroll-animate"&gt;Animates on scroll&lt;/div&gt;</code></div>
+
+        <h3>2. Lazy Loading Images</h3>
+        <div class="code-block"><code>&lt;img data-src="image.jpg" class="lazy-load" alt="..."&gt;</code></div>
+
+        <h3>3. JavaScript API</h3>
+        <div class="code-block"><code>// Add animation to element
+WebsiteOptimizations.addAnimationClass(element, 'fadeIn', 500);
+
+// Animate counter
+WebsiteOptimizations.animateCounter(element, 100, 1000);
+
+// View config
+console.log(WebsiteOptimizations.config);</code></div>
+    </div>
+
+    <!-- Scroll Animation Demo -->
+    <div class="scroll-section scroll-animate">
+        <div>
+            <h2>Scroll Down to See This Fade In! 👇</h2>
+            <p>This section animates when it scrolls into view</p>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>📚 Next Steps</h2>
+        <p>Now that you've seen the optimizations in action:</p>
+        <ol>
+            <li><strong>Check the documentation:</strong> Read OPTIMIZATION_GUIDE.md for detailed information</li>
+            <li><strong>Review your pages:</strong> All HTML files have been updated with these optimizations</li>
+            <li><strong>Customize if needed:</strong> Edit css/optimizations.css and js/optimizations.js</li>
+            <li><strong>Test on devices:</strong> Verify animations work smoothly on desktop and mobile</li>
+            <li><strong>Deploy to production:</strong> Use minified versions for better performance</li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IIITP Website Optimizations | Version 1.0</p>
+        <p>For more information, visit the documentation files included in your project</p>
+    </footer>
+
+    <!-- Include Optimizations -->
+    <script src="js/optimizations.js"></script>
+
+    <!-- Demo Scripts -->
+    <script>
+        function resetAnimations() {
+            const animations = document.querySelectorAll('.animation-demo');
+            animations.forEach(el => {
+                el.style.animation = 'none';
+                setTimeout(() => {
+                    el.style.animation = '';
+                }, 10);
+            });
+        }
+
+        // Log when optimizations are loaded
+        window.addEventListener('load', function() {
+            console.log('✅ Website Optimizations Demo Loaded');
+            console.log('Available at:', window.WebsiteOptimizations);
+        });
+    </script>
+</body>
+</html>

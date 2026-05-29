@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Board of Studies (ECE) | IIITP Pune</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="css/css.css" id="google-fonts-css" media="all" rel="stylesheet"/>
+<link href="css/foundation.min.css" id="foundation-css" media="all" rel="stylesheet"/>
+<link href="css/theme-styles.css" id="wc-styles-css" media="all" rel="stylesheet"/>
+<!--Customizer CSS-->
+<style type="text/css">
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		h2 a,
+		h3 a,
+		h4 a,
+		h5 a,
+		h6 a,
+		h1 span,
+		h2 span,
+		h3 span,
+		h4 span,
+		h5 span,
+		.tabs li a,
+		.accordion-title,
+		.pricing-table .title {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.top-bar {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.topBar,
+		.topBar p,
+		.topBar ul li {
+			color: #ffffff;
+		}
+
+		.header .submenu li a,
+		.main-container .top-bar .submenu li a {
+			color: #ffffff !important;
+		}
+
+		.navigation-style-two .is-active .submenu li a:hover,
+		.header .is-active .submenu li a:hover,
+		.top-bar .submenu li a:hover {
+			color: #e85d04 !important;
+		}
+
+		.navigation-style-two,
+		.navigation-style-two .top-bar ul {
+			background-color: #174873;
+		}
+
+		.title-section::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/title-section-background-effect-1-1.jpg);
+		}
+
+		.footer::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2019/05/slide1.jpg);
+		}
+
+		.seminar-events::after {
+			background-image: url(https://www.webfulcreations.com/themes/education/wp-content/uploads/sites/2/2016/11/eventsbgbk.jpg);
+		}
+	</style>
+<!--/Customizer CSS-->
+<style>
+
+        .main-nav li { position: relative; }
+					.main-nav .dropdown-menu { display: block; visibility: hidden; opacity: 0; position: absolute; top: 120%; left: 0; background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 20px rgba(0,0,0,0.08); min-width: 190px; padding: 0.35rem 0; margin: 0; list-style: none; z-index: 1000; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); pointer-events: none; transform: translateY(10px); }
+					.main-nav .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+					.main-nav .has-dropdown:hover .dropdown-menu { visibility: visible; opacity: 1; top: 100%; pointer-events: auto; transform: translateY(0); }
+        .main-nav .dropdown-menu li a { display: block; padding: 0.75rem 1rem; color: #111111; text-decoration: none; font-size: 0.95rem; border-bottom: none; }
+        .main-nav .dropdown-menu li a:hover { background: #f8f9fa; color: #e85d04; }
+
+
+        
+        
+        
+        .page-content { padding:0 22px 34px; max-width: 1400px; margin: 0 auto; }
+
+
+
+        /* Premium Filter Styling */
+        .filter-section {
+            padding: 30px 20px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .alphabet-filter-container, #alphabet-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 auto 25px auto;
+            padding: 0;
+            list-style: none;
+            max-width: 1100px;
+        }
+        #alphabet-filter li {
+            margin: 0;
+        }
+        .alphabet-filter-container a, #alphabet-filter a {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 20px;
+            background-color: #f4f6fb;
+            border: 1px solid #eaeaea;
+            color: #174873;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .alphabet-filter-container a:hover, .alphabet-filter-container a.active, #alphabet-filter a:hover, #alphabet-filter a.active {
+            background-color: #e85d04;
+            color: #ffffff;
+            border-color: #e85d04;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.2);
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .filters select {
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            color: #333;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            min-width: 180px;
+            font-family: inherit;
+        }
+        .filters select:hover, .filters select:focus {
+            border-color: #e85d04;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(232, 93, 4, 0.1);
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(232, 93, 4, 0.15);
+            border-color: #e85d04;
+        }
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+            border-bottom: 3px solid #174873;
+        }
+        .card:hover img {
+            transform: scale(1.03);
+            border-bottom: 3px solid #e85d04;
+        }
+        .card h3 {
+            margin: 15px 15px 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #174873;
+        }
+        .card h3 a, .card h3 strong {
+            font-weight: 600;
+        }
+        .card h3 a {
+            color: #174873;
+            text-decoration: none;
+        }
+        .card h3 a:hover {
+            color: #e85d04;
+        }
+        .card p {
+            margin: 0 15px 15px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .card p strong {
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Your existing CSS styles */
+
+    </style>
+
+    <style>
+    .page-content {
+        padding: 40px 22px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .admin-page-container {
+        font-family: 'Montserrat', sans-serif;
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        border-top: 5px solid #174873;
+        margin-bottom: 40px;
+    }
+    .admin-page-container h2, .admin-page-container h3, .admin-page-container h1 {
+        color: #174873;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    .admin-page-container p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 20px;
+    }
+    .admin-page-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .admin-page-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+    .admin-page-container th, .admin-page-container td {
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        text-align: left;
+    }
+    .admin-page-container th {
+        background-color: #f4f6fb;
+        color: #174873;
+        font-weight: 700;
+    }
+    .admin-page-container tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+    .admin-page-container tr:hover {
+        background-color: #f1f1f1;
+    }
+    .admin-page-container ul, .admin-page-container ol {
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+    .admin-page-container li {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 10px;
+    }
+    </style>
+    
+</head>
+<body>
+<div class="main-container">
+<header class="custom-iiitp-header">
+			<div class="mobile-menu-toggle" onclick="document.body.classList.toggle('mobile-menu-active')" style="display:none;">
+				<i class="fas fa-bars"></i>
+			</div>
+<!-- Top Blue Bar -->
+<div class="top-blue-bar">
+<ul class="social-icons" style="align-items: center;">
+<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+<li style="margin-left: 10px;">
+<select id="language-selector" onchange="changeLanguage(this.value)" style="background: transparent; color: white; border: 1px solid white; padding: 2px 5px; border-radius: 4px; font-size: 12px; cursor: pointer; height: 24px;">
+<option style="color: black;" value="en">English</option>
+<option style="color: black;" value="hi">Hindi</option>
+</select>
+</li>
+</ul>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+					}
+					function changeLanguage(lang) {
+						if(lang === 'hi') {
+							document.cookie = "googtrans=/en/hi; path=/";
+							document.cookie = "googtrans=/en/hi; domain=." + document.domain + "; path=/";
+						} else {
+							document.cookie = "googtrans=/en/en; path=/";
+							document.cookie = "googtrans=/en/en; domain=." + document.domain + "; path=/";
+						}
+						window.location.reload();
+					}
+					// Set dropdown to current language
+					document.addEventListener("DOMContentLoaded", function() {
+						if(document.cookie.indexOf('googtrans=/en/hi') !== -1) {
+							document.getElementById('language-selector').value = 'hi';
+						}
+					});
+				</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</div>
+<!-- Logo and Text Section -->
+<div class="logo-text-section">
+<div class="row custom-row-flex">
+<div class="logo-text-wrapper" style="flex-direction: row; align-items: center; justify-content: flex-start; width: 100%;">
+						<div class="logo-container">
+							<a href="index.html"><img src="images/header_logo.png" alt="IIIT Pune Logo" class="main-logo" style="max-height: 100px; width: auto; object-fit: contain;" /></a>
+						</div>
+					</div>
+<div class="constitution-logo-container">
+<img alt="75 Years of Constitution" class="constitution-logo" src="images/constitution_75.png"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Navigation Section -->
+<div class="nav-section" style="position: sticky; top: 0; z-index: 9999; background-color: #f8f9fa; width: 100%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+<div class="row">
+<ul class="main-nav">
+<li><a href="index.html">Home</a></li>
+
+<li><a href="#">Academics</a></li>
+<li><a href="#">Research</a></li>
+<li><a href="#">Student Life</a></li>
+<li class="has-dropdown"><a href="#">Administration </a>
+						<ul class="dropdown-menu">
+							<li><a href="admin_chairperson.html">Chairperson</a></li>
+							<li><a href="admin_director.html">Director</a></li>
+							<li><a href="admin_registrar.html">Registrar</a></li>
+							<li><a href="admin_board-of-governors.html">Board of Governors</a></li>
+							<li><a href="admin_finance-committee.html">Finance Committee</a></li>
+							<li><a href="admin_building-and-works-committee.html">Building and Works Committee</a></li>
+							<li><a href="admin_senate.html">Senate</a></li>
+							<li><a href="admin_board-of-studies-cse.html">Board of Studies (CSE)</a></li>
+							<li><a href="admin_board-of-studies-ece.html">Board of Studies (ECE)</a></li>
+							<li><a href="admin_board-of-studies-ash.html">Board of Studies (AS&H)</a></li>
+						</ul>
+					</li>
+					<li class="has-dropdown"><a href="#">People </a>
+<ul class="dropdown-menu">
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
+</ul>
+</li>
+<li><a href="#">Placements</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="#">Careers@IIITP</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#"><i class="fas fa-search"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="page-content">
+<div class="admin-page-container">
+<h1>Board of Studies (ECE)</h1>
+
+<div property="schema:text"><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    animation: fadeIn 1s ease-in;
+}
+
+p {
+    color: #0e36e6;
+    font-size: 2em; /* Increased font size */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 16px; /* Increased padding for larger font */
+    text-align: left;
+    font-size: 1.2em; /* Increased font size */
+}
+
+th {
+    background-color: #7461f0;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 12px; /* Adjusted padding for smaller screens */
+    }
+    p {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+}
+
+/*--><!]]>*/
+</style><title>Board of Studies (ECE) | IIITP Pune</title><p><strong>Board of Studies (ECE)</strong></p>
+<table><tbody><tr><th style="width: 10%;">Sr. No</th>
+<th style="width: 60%;">Name</th>
+<th style="width: 30%;">Designation</th>
+</tr><tr><td style="width: 10%;">1.</td>
+<td style="width: 60%;"><strong>Dr. Nagendra Kushwaha</strong><br/>
+			HoD ECE, IIIT Pune</td>
+<td style="width: 30%;">Chairperson</td>
+</tr><tr><td>2.</td>
+<td><strong>Dr. Sushant Kumar</strong><br/>
+			Assistant Professor, IIIT Pune</td>
+<td>Member</td>
+</tr><!-- Add all other entries as per the image data --><tr><td>3.</td>
+<td><strong>Dr. Shubham Shukla</strong><br/>
+			Assistant Professor, IIIT Pune</td>
+<td>Member</td>
+</tr><tr><td>4.</td>
+<td><strong>Dr. Dheeraj Dubey</strong><br/>
+			Assistant Professor, IIIT Pune</td>
+<td>Member</td>
+</tr><tr><td>5.</td>
+<td><strong>Dr. Dipen Bepari</strong><br/>
+			Assistant Professor, IIIT Pune</td>
+<td>Member</td>
+</tr><tr><td>6.</td>
+<td><strong>Dr. KM Divya Chaturvedi</strong><br/>
+			Assistant Professor, IIIT Pune</td>
+<td>Member</td>
+</tr><tr><td>7.</td>
+<td><strong>Dr. Sanjeev Sharma</strong><br/>
+			Assistant Professor, IIIT Pune</td>
+<td>Special Invitee</td>
+</tr><tr><td>8.</td>
+<td><strong>Dr. Jatin Majithia</strong><br/>
+			Assistant Professor, IIIT Pune</td>
+<td>Special Invitee</td>
+</tr><tr><td>9.</td>
+<td><strong>Dr. Bhupendra Singh</strong><br/>
+			HoD CSE, IIIT Pune</td>
+<td>Special Invitee</td>
+</tr><tr><td>10.</td>
+<td><strong>Prof. Vikram M. Gadre</strong><br/>
+			Prof IIT Bombay</td>
+<td>Expert Member</td>
+</tr><tr><td>11.</td>
+<td><strong>Dr. Satyam Shukla</strong><br/>
+			Tech. Leader at STMicroelectronics</td>
+<td>Expert Member</td>
+</tr><tr><td>12.</td>
+<td><strong>Libin T T</strong><br/>
+			Associate Director / Scientist 'F' at C-DAC</td>
+<td>Expert Member</td>
+</tr></tbody></table><div><strong>Please click here for the official Memorandum </strong></div>
+<div class="Downnload"><strong><span class="field-content"><a class="btn btn-info" href="https://www.iiitp.ac.in/sites/default/files/2025-02/BoS_ECE_IIITP_v1.pdf" target="_blank">View Document</a></span></strong></div>
+<p style="font-size:14px; color:#555; text-align:right; margin:10px;">
+    Last Updated: 25-04-2026
+</p></div>
+
+</div>
+</div>
+<!-- Footer -->
+<div class="footer">
+<div class="footerbottom">
+<div class="row">
+<div class="medium-6 small-12 columns left-side">
+<div class="copyrightinfo">© 2026 <a href="#">Indian Institute of Information Technology, Pune</a>.
+						All Rights Reserved.</div>
+</div><!-- left side /-->
+<div class="medium-6 small-12 columns right-side">
+<div class="menu-footer-menu-container">
+<ul class="menu" id="menu-footer-menu">
+<li><a href="#">Terms of Use</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div><!-- Right Side /-->
+</div><!-- Row /-->
+</div><!-- footer Bottom /-->
+</div>
+<!-- Footer Ends here /-->
+</div>
+<a class="animated fadeInUp start-anim" href="#top" id="top"><i class="fas fa-angle-double-up"></i></a>
+<script>
+
+
+
+        const staffList = document.querySelectorAll('.card');
+        const departmentFilter = document.getElementById('department-filter');
+        const modeFilter = document.getElementById('mode-filter');
+        const inchargeFilter = document.getElementById('incharge-filter');
+        let selectedLetter = 'ALL';
+
+        function filterstaff() {
+            const selectedDepartment = departmentFilter.value || 'ALL';
+            const selectedMode = modeFilter.value || 'ALL';
+            const selectedIncharge = inchargeFilter.value || 'ALL';
+
+            const container = document.querySelector('.card-container');
+            const visibleCards = [];
+
+            staffList.forEach(card => {
+                const name = card.dataset.name.toUpperCase();
+                const department = card.dataset.department;
+                const mode = card.dataset.mode;
+                const incharge = card.dataset.incharge;
+
+                let isVisible = true;
+
+                // Filter by letter
+                if (selectedLetter !== 'ALL' && !name.startsWith(selectedLetter)) {
+                    isVisible = false;
+                }
+
+                // Filter by department
+                if (selectedDepartment !== 'ALL' && department !== selectedDepartment) {
+                    isVisible = false;
+                }
+
+                // Filter by mode
+                if (selectedMode !== 'ALL' && mode !== selectedMode) {
+                    isVisible = false;
+                }
+
+                // Filter by incharge
+                if (selectedIncharge !== 'ALL' && incharge !== selectedIncharge) {
+                    isVisible = false;
+                }
+
+                card.style.display = isVisible ? 'block' : 'none';
+                if (isVisible) visibleCards.push(card);
+            });
+
+            // Sort visible cards only if a department is selected
+            if (selectedDepartment !== 'ALL') {
+                visibleCards.sort((a, b) => {
+                    const isAHoD = a.dataset.incharge === 'HOD' ? 1 : 0;
+                    const isBHoD = b.dataset.incharge === 'HOD' ? 1 : 0;
+
+                    // HoD comes first if applicable
+                    if (isBHoD !== isAHoD) {
+                        return isBHoD - isAHoD;
+                    }
+                    return 0;
+                });
+            }
+
+            // Clear and re-render sorted cards
+            container.innerHTML = '';
+            visibleCards.forEach(card => container.appendChild(card));
+        }
+
+        function filterByLetter(letter) {
+            selectedLetter = letter;
+            document.querySelectorAll('.filter-section a').forEach(a => a.classList.remove('active'));
+            document.getElementById(letter).classList.add('active');
+            filterstaff();
+        }
+
+        // Attach event listeners to filters
+        departmentFilter.addEventListener('change', filterstaff);
+        modeFilter.addEventListener('change', filterstaff);
+        inchargeFilter.addEventListener('change', filterstaff);
+    
+
+
+</script>
+<script src="js/search.js"></script>
+</body>
+</html>
